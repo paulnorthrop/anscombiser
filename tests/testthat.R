@@ -1,4 +1,4 @@
 library(testthat)
-library(anscombe)
+library(anscombiser)
 
-test_check("anscombe")
+test_check("anscombiser")
