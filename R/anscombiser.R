@@ -3,10 +3,9 @@
 #' Describe
 #'
 #' @details Add
-#' @references Arya, S., Mount, D., Kemp, S. E. and Jefferis, G. (2019)
-#'   RANN: Fast Nearest Neighbour Search (Wraps ANN Library) Using L2
-#'   Metric. R package version 2.6.1.
-#'   \url{https://CRAN.R-project.org/package=RANN}
+#' @references Steph Locke and Lucy D'Agostino McGowan (2018). datasauRus:
+#'   Datasets from the Datasaurus Dozen. R package version 0.1.4.
+#'   \url{https://CRAN.R-project.org/package=datasauRus}
 #' @seealso [anscombise] and [mimic]
 #' @docType package
 #' @name anscombiser
