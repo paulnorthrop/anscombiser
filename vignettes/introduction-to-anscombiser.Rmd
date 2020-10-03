@@ -23,7 +23,7 @@ The `anscombiser` package is named after the famous Anscombe's quartet datasets 
 
 The `datasauRus` package (@datasauRus) provides further examples of datasets that have markedly different scatter plots but nevertheless share many sample summary statistics.  These datasets were produced by using a simulated annealing algorithm that seeks to morph incrementally an initial dataset towards a target shape while maintaining the same sample summary statistics (@dpaper). In principle, any set of summary statistics can be used.  Indeed, @datasauRus provides not only dataset that have the same values of Anscombe's statistics (essentially sample means, variances and correlation) but also datasets that are constrained to share the same sample median, interquartile range and Spearman's correlation.
 
-The `anscombiser` package takes a simpler and quicker approach to the same problem, using Anscombe's statistics.  It uses shifting, scaling and rotating to transform the observations in an input dataset to achieve a target set of Anscombe's statistics.  these statistics can be set by and or by calculating them from a target dataset, perhaps one of the Anscombe quartet.  If the input dataset has statistics that are similar to the target statistics then the output dataset will look rather similar to the input dataset.  Otherwise, the output dataset will be a squashed and/or rotated version of the input dataset, but the general shape of the input dataset will still be visible.  It will be like viewing the input dataset from a different perspective.
+The `anscombiser` package takes a simpler and quicker approach to the same problem, using Anscombe's statistics.  It uses shifting, scaling and rotating to transform the observations in an input dataset to achieve a target set of Anscombe's statistics.  These statistics can be set directly or by calculating them from a target dataset, perhaps one of the Anscombe quartet.  If the input dataset has statistics that are similar to the target statistics then the output dataset will look rather similar to the input dataset.  Otherwise, the output dataset will be a squashed and/or rotated version of the input dataset, but the general shape of the input dataset will still be visible.  It will be like viewing the input dataset from a different perspective.
 
 Thus, we can easily create many datasets that have different general natures but share the same values of Anscombe's statistics.  In addition, this method works in more than two dimensions. 
 
@@ -85,4 +85,18 @@ The final image was created by [Accentaur from the Noun Project](https://thenoun
 
 ### Three-dimensional examples
 
+We conclude with a brief 3D example, using the `randu` and `trees` datasets in the `datasets` package. 
 
+```{r, 3D}
+new_randu <- mimic(datasets::randu, datasets::trees)
+# new_randu and trees share the same sample summary statistics
+new_randu_stats <- get_stats(new_randu)
+trees_stats <- get_stats(datasets::trees)
+# For example
+trees_stats$correlation
+new_randu_stats$correlation
+pairs(trees)
+pairs(new_randu)
+```
+
+It is well-known that in three-dimensional displays of the `randu` data non-random structure is evident, but this isn't evident in these pairwise displays. 
