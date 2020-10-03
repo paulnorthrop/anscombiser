@@ -15,12 +15,23 @@ use.  Obviously, this makes very little difference.}
 }
 \value{
 A dataset with the same format as \code{x}.  The returned dataset has the
-same summary statistics as those in \code{stats}, except perhaps for the sample
-size.
+following summary statistics in common with Anscombe's quartet.
+\itemize{
+\item The sample means of each variable.
+\item The sample variances of each variable.
+\item The sample correlation matrix.
+\item The estimated regression coefficients from least squares linear
+regressions of each variable on each other variable.
+}
 }
 \description{
 Modifies a dataset \code{x} so that it shares sample summary statistics with
 \code{\link[datasets:anscombe]{Anscombe's quartet}}.
+}
+\details{
+The input dataset \code{x} is modified by shifting, scaling and rotating
+it so that its sample mean and covariance matrix match those of the
+Anscombe quartet.
 }
 \examples{
 new_faithful <- anscombise(datasets::faithful)

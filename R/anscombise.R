@@ -7,9 +7,16 @@
 #'   on a different variable.  Missing observations are not allowed.
 #' @param which An integer in \{1, 2, 3, 4\}.  Which of Anscombe's dataset to
 #'   use.  Obviously, this makes very little difference.
+#' @details The input dataset `x` is modified by shifting, scaling and rotating
+#'   it so that its sample mean and covariance matrix match those of the
+#'   Anscombe quartet.
 #' @return A dataset with the same format as `x`.  The returned dataset has the
-#'  same summary statistics as those in `stats`, except perhaps for the sample
-#'  size.
+#'  following summary statistics in common with Anscombe's quartet.
+#'   * The sample means of each variable.
+#'   * The sample variances of each variable.
+#'   * The sample correlation matrix.
+#'   * The estimated regression coefficients from least squares linear
+#'     regressions of each variable on each other variable.
 #' @examples
 #' new_faithful <- anscombise(datasets::faithful)
 #' plot(new_faithful)
