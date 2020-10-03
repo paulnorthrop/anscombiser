@@ -58,7 +58,9 @@
 #' ### A 3D example
 #'
 #' new_randu <- mimic(datasets::randu, datasets::trees)
-#' plot(new_randu)
+#' # The samples summary statistics are equal
+#' get_stats(new_randu)
+#' get_stats(datasets::trees)
 #' @export
 #' @md
 mimic <- function(x, x2, ...) {
