@@ -36,7 +36,7 @@ mimic <- function(x, x2) {
   if (anyNA(x)) {
     stop("x must not contain any missing values")
   }
-  if (!is.matrix(x) && !is.data.frame(x2)) {
+  if (!is.matrix(x2) && !is.data.frame(x2)) {
     stop("x2 must be a matrix or a dataframe")
   }
   if (anyNA(x2)) {
