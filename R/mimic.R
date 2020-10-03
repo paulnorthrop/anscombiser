@@ -18,6 +18,9 @@
 #'   * The sample correlation matrix.
 #'   * The estimated regression coefficients from least squares linear
 #'     regressions of each variable on each other variable.
+#'   The target and new summary statistics are returned as attributes
+#'   `old_stats` and `new_stats`.
+#'   If `x2` is supplied then it is returned as a attribute `old_data`.
 #' @examples
 #' got_maps <- requireNamespace("maps", quietly = TRUE)
 #' got_datasauRus <- requireNamespace("datasauRus", quietly = TRUE)
@@ -34,6 +37,7 @@
 mimic <- function(x, x2, ...) {
   if (missing(x2)) {
     x2_stats <- set_stats(d = ncol(x), ...)
+    old_data <- NA
   } else {
     if (!is.matrix(x2) && !is.data.frame(x2)) {
       stop("x2 must be a matrix or a dataframe")
@@ -42,6 +46,7 @@ mimic <- function(x, x2, ...) {
       stop("x2 must not contain any missing values")
     }
     x2_stats <- get_stats(x2)
+    old_data <- x2
   }
   if (!is.matrix(x) && !is.data.frame(x)) {
     stop("x must be a matrix or a dataframe")
@@ -53,7 +58,9 @@ mimic <- function(x, x2, ...) {
   # Calculate the summary statistics directly as a check
   new_stats <- get_stats(new_x)
   # Save the target and new statistics as attributes, for testing and plotting
-  res <- structure(new_x, new_stats = new_stats, old_stats = x2_stats)
+  if (missing(x2))
+  res <- structure(new_x, new_stats = new_stats, old_stats = x2_stats,
+                   old_data = old_data)
   class(res) <- c("anscombe", class(res))
   return(res)
 }

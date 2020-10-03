@@ -24,6 +24,9 @@ following summary statistics in common with \code{x2}.
 \item The sample correlation matrix.
 \item The estimated regression coefficients from least squares linear
 regressions of each variable on each other variable.
+The target and new summary statistics are returned as attributes
+\code{old_stats} and \code{new_stats}.
+If \code{x2} is supplied then it is returned as a attribute \code{old_data}.
 }
 }
 \description{

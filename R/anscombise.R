@@ -18,6 +18,9 @@
 #'   * The sample correlation matrix.
 #'   * The estimated regression coefficients from least squares linear
 #'     regressions of each variable on each other variable.
+#'   The target and new summary statistics are returned as attributes
+#'   `old_stats` and `new_stats` and the anscombe dataset used as a attribute
+#'   `old_data`.
 #' @examples
 #' new_faithful <- anscombise(datasets::faithful)
 #' plot(new_faithful)
@@ -33,12 +36,14 @@ anscombise <- function(x, which = 1) {
   if (!is_wholenumber(which) || x < 1 || x > 4) {
     stop("x must be an integer in {1, 2, 3, 4}")
   }
-  anscombe_stats <- get_stats(anscombe[, c(which, which + 4)])
+  anscombe_data <- anscombe[, c(which, which + 4)]
+  anscombe_stats <- get_stats(anscombe_data)
   new_x <- make_stats(x, anscombe_stats)
   # Calculate the summary statistics directly as a check
   new_stats <- get_stats(new_x)
   # Save the target and new statistics as attributes, for testing and plotting
-  res <- structure(new_x, new_stats = new_stats, old_stats = anscombe_stats)
+  res <- structure(new_x, new_stats = new_stats, old_stats = anscombe_stats,
+                   old_data = anscombe_data)
   class(res) <- c("anscombe", class(res))
   return(res)
 }
