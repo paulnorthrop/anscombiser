@@ -13,7 +13,8 @@ bibliography: anscombiser.bib
 ---
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(comment = "#>", collapse = TRUE, out.width = '80%', global.par = TRUE, fig.align = 'center', fig.width = 7, fig.height = 5)
+knitr::opts_chunk$set(comment = "#>", collapse = TRUE, out.width = '80%', fig.align = 'center', fig.width = 7, fig.height = 7)
+knitr::opts_knit$set(global.par = TRUE)
 ```
 
 The `anscombiser` package is named after the famous Anscombe's quartet datasets (@anscombe).  Frank Anscombe created these datasets to emphasize the importance of graphical techniques in statistical analyses.  The datasets each consist of 11 pairs of $(x, y)$ points and they have almost exactly the same values of an apparently remarkable number of sample summary statistics.  However, scatter plots of these data reveal that the behaviours exhibited in these datasets are very different.  That inspecting summary statistics can give a very misleading impression of a dataset is an important point for students of Statistics to appreciate.
@@ -34,14 +35,54 @@ library(anscombe)
 
 The `anscombise()` function takes an input two-dimensional dataset and outputs a dataset that shares Anscombe's statistics with his quartet of datasets.  The `which` argument chooses which of Anscombe's datasets to use.  Of course, this affects the output datset only minimally but it matters if we want to plot the input dataset, as we do below.
 
-```{r}
+```{r par, echo = FALSE}
 par(mar = c(4, 4, 1, 1))
+```
+
+```{r anscombe}
 new_faithful <- anscombise(datasets::faithful, which = 4)
 plot(new_faithful)
 plot(new_faithful, input = TRUE)
 ```
 
+If we view a plot of the outline of the coast of Italy from a strange angle then the resulting dataset has the same sample summary statistics as those above. 
+
+```{r italy}
+italy <- mapdata("Italy")
+new_italy <- anscombise(italy, which = 4)
+plot(new_italy)
+```
+
 ### Other two-dimensional examples
 
+The `mimic()` function of the `anscombiser` package transforms an input dataset, as outlined above, to mimic another dataset, in the sense of replicating its values of Anscombe's statistics.  A particularly effective feature of the `datasauRus` package is a dataset that draws a picture of a dinosaur.  Here, we show that a plot of the outline of the coast of the UK needs little adjustment to replicate the sample summart statistics of the dinosaur dataset.   
+
+```{r check, echo = FALSE}
+got_datasauRus <- requireNamespace("datasauRus", quietly = TRUE)
+got_maps <- requireNamespace("maps", quietly = TRUE)
+got_both <- got_datasauRus & got_maps
+```
+
+```{r dino, eval = got_both}
+  library(datasauRus)
+  library(maps)
+  dino <- datasaurus_dozen_wide[, c("dino_x", "dino_y")]
+  UK <- mapdata("UK")
+  new_UK <- mimic(UK, dino)
+  plot(new_UK, legend_args = list(x = "right"))
+  plot(new_UK, input = TRUE, legend_args = list(x = "topright"))
+```
+
+We finish this section with another example involving the dinosaur.
+
+```{r, trump, eval = got_both}
+  new_dino <- mimic(dino, trump)
+  plot(new_dino, legend_args = list(x = "topright"))
+  plot(new_dino, input = TRUE, legend_args = list(x = "bottomright"), pch = 20)
+```
+
+The final image was created by [Accentaur from the Noun Project](https://thenounproject.com/term/donald-trump/727774/). 
+
 ### Three-dimensional examples
+
 
