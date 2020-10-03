@@ -4,13 +4,18 @@
 \alias{plot.anscombe}
 \title{Plot diagnostics for an anscombe object}
 \usage{
-\method{plot}{anscombe}(x, ...)
+\method{plot}{anscombe}(x, old = FALSE, superimpose = FALSE, ...)
 }
 \arguments{
 \item{x}{an object of class \code{'anscombe'}, a result of a call to \link{anscombise}
-or \link{mimc}.}
+or \link{mimic}.}
 
 \item{...}{Further arguments to be passed to \code{\link[graphics:plot.default]{plot}}}
+
+\item{input}{A logical scalar.  Should the old, input data, that is, the
+Anscombe's dataset chosen for \link{anscombise} or the argument \code{x2} to \link{mimic},
+be plotted?  If \code{old = FALSE} then the new, output data are plotted.
+If \code{old = TRUE} then the old data are plotted.}
 }
 \value{
 Nothing is returned.
