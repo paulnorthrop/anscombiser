@@ -27,9 +27,12 @@
 #' # Then check that the sample summary statistics are the same
 #' plot(new_faithful, input = TRUE)
 #'
-#' italy <- mapdata("Italy")
-#' new_italy <- anscombise(italy, which = 4)
-#' plot(new_italy)
+#' got_maps <- requireNamespace("maps", quietly = TRUE)
+#' if (got_maps) {
+#'   italy <- mapdata("Italy")
+#'   new_italy <- anscombise(italy, which = 4)
+#'   plot(new_italy)
+#' }
 #' @export
 #' @md
 anscombise <- function(x, which = 1) {
