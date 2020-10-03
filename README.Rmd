@@ -12,19 +12,29 @@ knitr::opts_chunk$set(
 )
 ```
 
-# anscombe
+# anscombiser
 
-[![Travis-CI Build Status](https://travis-ci.org/paulnorthrop/anscombe.svg?branch=master)](https://travis-ci.org/paulnorthrop/anscombe) 
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/paulnorthrop/anscombe?branch=master&svg=true)](https://ci.appveyor.com/project/paulnorthrop/anscombe)
-[![Coverage Status](https://codecov.io/github/paulnorthrop/anscombe/coverage.svg?branch=master)](https://codecov.io/github/paulnorthrop/anscombe?branch=master)
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/anscombe)](https://cran.r-project.org/package=anscombe)
+[![Travis-CI Build Status](https://travis-ci.org/paulnorthrop/anscombiser.svg?branch=master)](https://travis-ci.org/paulnorthrop/anscombiser) 
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/paulnorthrop/anscombiser?branch=master&svg=true)](https://ci.appveyor.com/project/paulnorthrop/anscombiser)
+[![Coverage Status](https://codecov.io/github/paulnorthrop/anscombiser/coverage.svg?branch=master)](https://codecov.io/github/paulnorthrop/anscombiser?branch=master)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/anscombiser)](https://cran.r-project.org/package=anscombiser)
 
 ## Title
 
-### What does anscombe do?
+### What does anscombiser do?
 
+anscombiser's quartet are a set of four two-variable datasets that have several common summary statistics but which have very different joint distributions.  This becomes apparent when the data are plotted, which illustrates the importance of using graphical displays in Statistics.  The `anscombiser` package provides a quick and easy way to create several datasets that have common values for anscombiser's summary statistics but display very different behaviour when plotted. 
 
 ### An example
+
+The `mimic()` function em
+
+```{r, trump}
+library(anscombiser)
+new_dino <- mimic(dino, trump)
+plot(new_dino, legend_args = list(x = "topright"))
+plot(new_dino, input = TRUE, legend_args = list(x = "bottomright"), pch = 20)
+```
 
 
 ### Installation
@@ -32,10 +42,10 @@ knitr::opts_chunk$set(
 To get the current released version from CRAN:
 
 ```{r installation, eval = FALSE}
-install.packages("anscombe")
+install.packages("anscombiser")
 ```
 
 ### Vignette
 
-See `vignette("anscombe-vignette", package = "anscombe")` for an overview of the package.
+See `vignette("intro-to-anscombiser", package = "anscombiser")` for an overview of the package.
 
