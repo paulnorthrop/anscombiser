@@ -19,7 +19,7 @@
 #' set_stats(correlation = matrix(c(1, 0.9, 0.9, 1), 2, 2))
 #' @export
 #' @md
-set_stats <- function(d = 2, means = 0, variances = 0, correlation = diag(2)) {
+set_stats <- function(d = 2, means = 0, variances = 1, correlation = diag(2)) {
   if (!is_wholenumber(d) || d < 2) {
     stop("d must be a positive integer that is no smaller than 2")
   }
