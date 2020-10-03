@@ -3,13 +3,10 @@
 \name{anscombiser-internal}
 \alias{anscombiser-internal}
 \alias{is_wholenumber}
-\alias{mapdata}
 \alias{is_pos_def}
 \title{Internal anscombiser functions}
 \usage{
 is_wholenumber(x, tol = .Machine$double.eps^0.5)
-
-mapdata(region = ".", map = "world", exact = FALSE, ...)
 
 is_pos_def(x, tol = 1e-06)
 }

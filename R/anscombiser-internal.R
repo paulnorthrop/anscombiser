@@ -15,16 +15,6 @@ is_wholenumber <- function(x, tol = .Machine$double.eps^0.5) {
   return(abs(x - round(x)) < tol)
 }
 
-# Function to extract longitude and latitude from the maps package
-
-#' @keywords internal
-#' @rdname anscombiser-internal
-mapdata <- function(region = '.', map = "world", exact = FALSE, ...) {
-  locs <- maps::map(map, region, exact = exact, plot = FALSE, fill = TRUE, ...)
-  locs <- na.omit(data.frame(long = locs$x, lat = locs$y))
-  return(locs)
-}
-
 # Check positive definiteness of a symmetric matrix
 
 #' @keywords internal
