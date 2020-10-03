@@ -1,0 +1,31 @@
+Package: anscombe
+Title: Create datasets with identical summary statistics
+Version: 1.0.0.9000
+Date: 2020-10-01
+Authors@R: person(c("Paul", "J."), "Northrop", email = "p.northrop@ucl.ac.uk",
+  role = c("aut", "cre", "cph"))
+Description: Anscombe's quartet are a set of four two-variable datasets that 
+    have several common summary statistics but which have very different joint 
+    distributions.  This becomes apparent when the data are plotted, which 
+    illustrates the importance of using graphical displays in Statistics.  This
+    package enables the creation of datasets that have identical marginal sample
+    means and sample variances, sample correlation and least squares regression 
+    coefficients.  The user supplies an initial dataset, which is shifted, scaled 
+    and rotated in order to achieve the target summary statistics.  Thus, the 
+    general shape of the initial dataset is retained.  
+Imports: 
+    graphics,
+    stats
+License: GPL (>= 2)
+LazyData: TRUE
+Encoding: UTF-8
+Depends:
+    R (>= 3.3.0)
+RoxygenNote: 7.1.0
+Suggests:
+    dinoausRus,
+    maps,
+    ggplot2
+VignetteBuilder: knitr
+URL: http://github.com/paulnorthrop/anscombe, https://paulnorthrop.github.io/anscombe/
+BugReports: http://github.com/paulnorthrop/anscombe/issues
