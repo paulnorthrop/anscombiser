@@ -35,10 +35,10 @@ get_stats <- function(x) {
    res$slopes <- matrix(1, nvar, nvar)
    for (i in 2:nvar) {
      for (j in 1:(i - 1)) {
-       coefs <- coef(stats::lm(x[, i] ~ x[, j]))
+       coefs <- coef(stats::lm(x[[i]] ~ x[[j]]))
        res$intercepts[i, j] <- coefs[1]
        res$slopes[i, j] <- coefs[2]
-       coefs <- coef(stats::lm(x[, j] ~ x[, i]))
+       coefs <- coef(stats::lm(x[[j]] ~ x[[i]]))
        res$slopes[j, i] <- coefs[1]
        res$intercepts[j, i] <- coefs[2]
      }
