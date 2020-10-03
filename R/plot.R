@@ -15,7 +15,8 @@
 #' @param digits An integer.  The argument `digits` passed to [`signif`]
 #'   to round the values of the statistics before adding them to the plot.
 #' @param legend_args A list of arguments to be passed to
-#'   [`legend`][graphics::legend] when `stats = TRUE`.
+#'   [`legend`][graphics::legend] when `stats = TRUE`, especially
+#'   `legend_args$x` to control the positio of the legend.
 #' @param ... Further arguments to be passed to [`plot`][graphics::plot.default]
 #' @details This function is only applicable in 2 or 3 dimensions, that is,
 #'   when ``length(attr(x, "new_stats")$means)`` is 2 or 3.
@@ -57,12 +58,20 @@ plot.anscombe <- function(x, input = FALSE, stats = TRUE, digits = 3,
     }
     my_plot(new_data, ...)
     if (stats) {
+      if (is.null(legend_args$x)) {
+        legend_args$x <- "topleft"
+      }
+      if (is.null(legend_args$bty)) {
+        legend_args$bty <- "n"
+      }
       nleg <- paste("n:", n)
-      mleg <- paste("means:", signif(means[1], digits), signif(means[2], digits))
-      vleg <- paste("variances:", signif(variances[1], digits),
-                    signif(variances[2], digits))
+      mleg <- paste0("means: (", signif(means[1], digits), ",",
+                    signif(means[2], digits), ")")
+      vleg <- paste0("variances: (", signif(variances[1], digits), ",",
+                    signif(variances[2], digits), ")")
       cleg <- paste("correlation:", signif(correlation[1, 2], digits))
-      legend("topleft", legend = c(nleg, mleg, vleg, cleg))
+      legend_args$legend <- c(nleg, mleg, vleg, cleg)
+      do.call(legend, legend_args)
     }
   }
   return(invisible())

@@ -22,7 +22,8 @@ plotted. If \code{old = TRUE} then the old data are plotted.}
 to round the values of the statistics before adding them to the plot.}
 
 \item{legend_args}{A list of arguments to be passed to
-\code{\link[graphics:legend]{legend}} when \code{stats = TRUE}.}
+\code{\link[graphics:legend]{legend}} when \code{stats = TRUE}, especially
+\code{legend_args$x} to control the positio of the legend.}
 
 \item{...}{Further arguments to be passed to \code{\link[graphics:plot.default]{plot}}}
 }
