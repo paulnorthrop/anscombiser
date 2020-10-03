@@ -14,6 +14,7 @@ Description: Anscombe's quartet are a set of four two-variable datasets that
     and rotated in order to achieve the target summary statistics.  Thus, the 
     general shape of the initial dataset is retained.  
 Imports: 
+    datasets,
     graphics,
     stats
 License: GPL (>= 2)
