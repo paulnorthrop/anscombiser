@@ -13,7 +13,7 @@ on a different variable.  Missing observations are not allowed.}
 \item{stats}{A list of sample summary statistics that must include
 \itemize{
 \item \code{means} The sample means of each variable.
-\item \code{variances} The sample means of each variable.
+\item \code{variances} The sample variances of each variable.
 \item \code{correlation} The sample correlation matrix.
 }}
 }

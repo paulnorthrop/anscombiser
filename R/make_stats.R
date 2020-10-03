@@ -8,7 +8,7 @@
 #'   on a different variable.  Missing observations are not allowed.
 #' @param stats A list of sample summary statistics that must include
 #'   * `means` The sample means of each variable.
-#'   * `variances` The sample means of each variable.
+#'   * `variances` The sample variances of each variable.
 #'   * `correlation` The sample correlation matrix.
 #' @return A dataset with the same format as `x`.  The returned dataset has the
 #'  same summary statistics as those in `stats`, except perhaps for the sample
