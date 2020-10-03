@@ -64,21 +64,21 @@ got_both <- got_datasauRus & got_maps
 ```
 
 ```{r dino, eval = got_both}
-  library(datasauRus)
-  library(maps)
-  dino <- datasaurus_dozen_wide[, c("dino_x", "dino_y")]
-  UK <- mapdata("UK")
-  new_UK <- mimic(UK, dino)
-  plot(new_UK, legend_args = list(x = "right"))
-  plot(new_UK, input = TRUE, legend_args = list(x = "topright"))
+library(datasauRus)
+library(maps)
+dino <- datasaurus_dozen_wide[, c("dino_x", "dino_y")]
+UK <- mapdata("UK")
+new_UK <- mimic(UK, dino)
+plot(new_UK, legend_args = list(x = "right"))
+plot(new_UK, input = TRUE, legend_args = list(x = "topright"))
 ```
 
 We finish this section with another example involving the dinosaur.
 
 ```{r, trump, eval = got_both}
-  new_dino <- mimic(dino, trump)
-  plot(new_dino, legend_args = list(x = "topright"))
-  plot(new_dino, input = TRUE, legend_args = list(x = "bottomright"), pch = 20)
+new_dino <- mimic(dino, trump)
+plot(new_dino, legend_args = list(x = "topright"))
+plot(new_dino, input = TRUE, legend_args = list(x = "bottomright"), pch = 20)
 ```
 
 The final image was created by [Accentaur from the Noun Project](https://thenounproject.com/term/donald-trump/727774/). 
