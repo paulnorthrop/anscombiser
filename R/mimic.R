@@ -22,7 +22,9 @@
 #'   `old_stats` and `new_stats`.
 #'   If `x2` is supplied then it is returned as a attribute `old_data`.
 #' @examples
-#' ## The UK and a dinosaur
+#' ### 2D examples
+#'
+#' # The UK and a dinosaur
 #' got_maps <- requireNamespace("maps", quietly = TRUE)
 #' got_datasauRus <- requireNamespace("datasauRus", quietly = TRUE)
 #' if (got_maps && got_datasauRus) {
@@ -34,12 +36,11 @@
 #'   plot(new_UK)
 #' }
 #'
-#' ## Trump and a dinosaur
-#'
+#' # Trump and a dinosaur
 #' if (got_datasauRus) {
 #'   library(datasauRus)
 #'   dino <- datasaurus_dozen_wide[, c("dino_x", "dino_y")]
-#'   new_dino <- mimic(dino,trump)
+#'   new_dino <- mimic(dino, trump)
 #'   plot(new_dino)
 #' }
 #'
@@ -54,6 +55,10 @@
 #' new_faithful <- mimic(faithful, correlation = mat)
 #' plot(new_faithful)
 #'
+#' ### A 3D example
+#'
+#' new_randu <- mimic(datasets::randu, datasets::trees)
+#' plot(new_randu)
 #' @export
 #' @md
 mimic <- function(x, x2, ...) {

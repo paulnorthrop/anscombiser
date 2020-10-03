@@ -38,7 +38,9 @@ The input dataset \code{x} is modified by shifting, scaling and rotating
 it so that its sample mean and covariance matrix match those of \code{x2}.
 }
 \examples{
-## The UK and a dinosaur
+### 2D examples
+
+# The UK and a dinosaur
 got_maps <- requireNamespace("maps", quietly = TRUE)
 got_datasauRus <- requireNamespace("datasauRus", quietly = TRUE)
 if (got_maps && got_datasauRus) {
@@ -50,12 +52,11 @@ if (got_maps && got_datasauRus) {
   plot(new_UK)
 }
 
-## Trump and a dinosaur
-
+# Trump and a dinosaur
 if (got_datasauRus) {
   library(datasauRus)
   dino <- datasaurus_dozen_wide[, c("dino_x", "dino_y")]
-  new_dino <- mimic(dino,trump)
+  new_dino <- mimic(dino, trump)
   plot(new_dino)
 }
 
@@ -70,4 +71,8 @@ mat <- matrix(c(1, -0.9, -0.9, 1), 2, 2)
 new_faithful <- mimic(faithful, correlation = mat)
 plot(new_faithful)
 
+### A 3D example
+
+new_randu <- mimic(datasets::randu, datasets::trees)
+plot(new_randu)
 }
