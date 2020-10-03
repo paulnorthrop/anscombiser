@@ -2,7 +2,7 @@
 #'
 #' Modifies a dataset `x` so that it has specified sample summary statistics.
 #' The summary statistics can be created from a target dataset with the same
-#' number of variables as `x` using [get_stats].
+#' number of variables as `x` using [`get_stats`].
 #'
 #' @param x a numeric matrix or data frame.  Each column contains observations
 #'   on a different variable.  Missing observations are not allowed.

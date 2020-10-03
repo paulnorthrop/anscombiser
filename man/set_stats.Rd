@@ -25,7 +25,7 @@ A list containing the following components.
 }
 }
 \description{
-Creates a list of summary statistics to pass to \link{mimic}.
+Creates a list of summary statistics to pass to \code{\link{mimic}}.
 }
 \details{
 The vectors \code{means} and \code{variances} are recycled using

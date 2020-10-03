@@ -4,18 +4,27 @@
 \alias{plot.anscombe}
 \title{Plot diagnostics for an anscombe object}
 \usage{
-\method{plot}{anscombe}(x, old = FALSE, ...)
+\method{plot}{anscombe}(x, input = FALSE, stats = TRUE, digits = 3, legend_args = list(), ...)
 }
 \arguments{
-\item{x}{an object of class \code{'anscombe'}, a result of a call to \link{anscombise}
-or \link{mimic}.}
-
-\item{...}{Further arguments to be passed to \code{\link[graphics:plot.default]{plot}}}
+\item{x}{an object of class \code{'anscombe'}, a result of a call to
+\code{\link{anscombise}} or \code{\link{mimic}}.}
 
 \item{input}{A logical scalar.  Should the old, input data, that is, the
-Anscombe's dataset chosen for \link{anscombise} or the argument \code{x2} to \link{mimic},
-be plotted?  If \code{old = FALSE} then the new, output data are plotted.
-If \code{old = TRUE} then the old data are plotted.}
+Anscombe's dataset chosen for \code{\link{anscombise}} or the argument \code{x2} to
+\code{\link{mimic}}, be plotted?  If \code{old = FALSE} then the new, output data are
+plotted. If \code{old = TRUE} then the old data are plotted.}
+
+\item{stats}{A logical scalar.  Should the sample summary statistics
+\code{n}, \code{means}, \code{variances} and \code{correlation} be added to the plot?}
+
+\item{digits}{An integer.  The argument \code{digits} passed to \code{\link{signif}}
+to round the values of the statistics before adding them to the plot.}
+
+\item{legend_args}{A list of arguments to be passed to
+\code{\link[graphics:legend]{legend}} when \code{stats = TRUE}.}
+
+\item{...}{Further arguments to be passed to \code{\link[graphics:plot.default]{plot}}}
 }
 \value{
 Nothing is returned.
@@ -29,9 +38,9 @@ when \code{length(attr(x, "new_stats")$means)} is 2 or 3.
 }
 \section{Examples}{
 
-See the examples in \link{anscombise} and \link{mimic}.
+See the examples in \code{\link{anscombise}} and \code{\link{mimic}}.
 }
 
 \seealso{
-\link{anscombise} and \link{mimic}.
+\code{\link{anscombise}} and \code{\link{mimic}}.
 }

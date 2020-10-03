@@ -16,5 +16,5 @@ Datasets from the Datasaurus Dozen. R package version 0.1.4.
 \url{https://CRAN.R-project.org/package=datasauRus}
 }
 \seealso{
-\link{anscombise} and \link{mimic}
+\code{\link{anscombise}} and \code{\link{mimic}}
 }

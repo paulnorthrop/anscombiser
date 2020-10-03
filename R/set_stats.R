@@ -1,6 +1,6 @@
 #' Create a list of summary statistics
 #'
-#' Creates a list of summary statistics to pass to [mimic].
+#' Creates a list of summary statistics to pass to [`mimic`].
 #'
 #' @param d An integer that is no smaller than 2.
 #' @param means A numeric vector of sample means.

@@ -7,11 +7,11 @@
 \method{print}{anscombe}(x, ...)
 }
 \arguments{
-\item{x}{an object of class "anscombe", a result of a call to \link{anscombise}
-or \link{mimic}.}
+\item{x}{an object of class "anscombe", a result of a call to \code{\link{anscombise}}
+or \code{\link{mimic}}.}
 
 \item{...}{Additional optional arguments to be passed to
-\link[=print.default]{print}.}
+\code{\link[=print.default]{print}}.}
 }
 \value{
 The argument \code{x}, invisibly, as for all
@@ -22,8 +22,8 @@ The argument \code{x}, invisibly, as for all
 }
 \details{
 Just extracts the new dataset from \code{x} and prints it using
-\link[=print.default]{print}.
+\code{\link[=print.default]{print}}.
 }
 \seealso{
-\link{anscombise} and \link{mimic}
+\code{\link{anscombise}} and \code{\link{mimic}}
 }
