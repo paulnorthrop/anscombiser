@@ -2,16 +2,18 @@
 % Please edit documentation in R/mimic.R
 \name{mimic}
 \alias{mimic}
-\title{Modify a dataset to achieve certain sample summary statistics}
+\title{Modify a dataset to achieve certain target sample summary statistics}
 \usage{
-mimic(x, x2)
+mimic(x, x2, ...)
 }
 \arguments{
-\item{x}{A numeric matrix or data frame.  Each column contains observations
-on a different variable.  Missing observations are not allowed.}
+\item{x, x2}{Numeric matrices or data frames.  Each column contains observations
+on a different variable.  Missing observations are not allowed.
+\code{\link{get_stats(x2)}} sets the target summary statistics.
+If \code{x2} is missing then \code{\link{set_stats}} is called with
+\code{d = ncol(x)} and any additional arguments supplied via \code{...}.}
 
-\item{x2}{A numeric matrix or data frame.  Each column contains observations
-on a different variable.  Missing observations are not allowed.}
+\item{...}{Additional arguments to be passed to \code{\link{set_stats}}.}
 }
 \value{
 A dataset with the same format as \code{x}.  The returned dataset has the
