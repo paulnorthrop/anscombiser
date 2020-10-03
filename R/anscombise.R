@@ -5,7 +5,7 @@
 #'
 #' @param x A numeric matrix or data frame.  Each column contains observations
 #'   on a different variable.  Missing observations are not allowed.
-#' @param which An integer in {1, 2, 3, 4}.  Which of Anscombe's dataset to
+#' @param which An integer in \{1, 2, 3, 4\}.  Which of Anscombe's dataset to
 #'   use.  Obviously, this makes very little difference.
 #' @return A dataset with the same format as `x`.  The returned dataset has the
 #'  same summary statistics as those in `stats`, except perhaps for the sample

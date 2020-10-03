@@ -10,7 +10,7 @@ anscombise(x, which = 1)
 \item{x}{A numeric matrix or data frame.  Each column contains observations
 on a different variable.  Missing observations are not allowed.}
 
-\item{which}{An integer in {1, 2, 3, 4}.  Which of Anscombe's dataset to
+\item{which}{An integer in \{1, 2, 3, 4\}.  Which of Anscombe's dataset to
 use.  Obviously, this makes very little difference.}
 }
 \value{
