@@ -4,16 +4,17 @@
 \alias{set_stats}
 \title{Create a list of summary statistics}
 \usage{
-set_stats(d = 2, means = 0, variances = 0, correlation = diag(2))
+set_stats(d = 2, means = 0, variances = 1, correlation = diag(2))
 }
 \arguments{
 \item{d}{An integer that is no smaller than 2.}
 
 \item{means}{A numeric vector of sample means.}
 
-\item{variances}{A numeric vector of sample variances.}
+\item{variances}{A numeric vector of positive sample variances.}
 
-\item{correlations}{A numeric correlation matrix.}
+\item{correlation}{A numeric correlation matrix.  None of the off-diagonal
+entries in \code{correlation} are allowed to be equal to 1 in absolute value.}
 }
 \value{
 A list containing the following components.
