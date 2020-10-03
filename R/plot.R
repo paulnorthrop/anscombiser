@@ -23,9 +23,16 @@ plot.anscombe <- function(x, ...) {
   if (d != 2 && d != 3) {
     stop("The plot method only works for datasets with 2 or 3 variables")
   }
-  my_plot <- function(x, ...) {
-    graphics::plot(x, ...)
+  # Extract new and old data
+  new_data <- x[, 1:2]
+  # Extract attributes
+  new_stats <- attr(x, "new_stats")
+  old_stats <- attr(x, "old_stats")
+  if (d == 2) {
+    my_plot <- function(x, ...) {
+      graphics::plot(x, ...)
+    }
+    my_plot(new_data, ...)
   }
-  my_plot(x, ...)
   return(invisible())
 }
