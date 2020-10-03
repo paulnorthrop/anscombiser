@@ -24,8 +24,9 @@ Depends:
     R (>= 3.3.0)
 RoxygenNote: 7.1.0
 Suggests:
-    dinoausRus,
-    maps
+    datasauRus,
+    maps,
+    testthat
 VignetteBuilder: knitr
 URL: http://github.com/paulnorthrop/anscombe, https://paulnorthrop.github.io/anscombe/
 BugReports: http://github.com/paulnorthrop/anscombe/issues
