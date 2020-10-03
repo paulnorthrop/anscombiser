@@ -23,3 +23,34 @@ is_pos_def <- function(x, tol = 1e-06) {
   evalues <- eigen(x, symmetric = TRUE)$values
   return(all(evalues >= -tol * abs(evalues[1L])))
 }
+
+#' @keywords internal
+#' @rdname anscombiser-internal
+make_stats <- function(x, stats) {
+  if (!is.matrix(x) && !is.data.frame(x)) {
+    stop("x must be a matrix or a dataframe")
+  }
+  if (anyNA(x)) {
+    stop("x must not contain any missing values")
+  }
+  # Shift and scale to zero means and unit variances
+  x <- scale(x)
+  # Input sample correlation matrix
+  s1 <- cor(x)
+  # Rotate to zero sample correlation
+  trans1 <- chol(solve(s1))
+  x <- t(trans1 %*% t(x))
+  # Shift and scale again
+  x <- scale(x)
+  # Target sample correlation
+  s2 <- stats$correlation
+  # Rotate to target sample correlation
+  trans2 <- chol(s2)
+  x <- x %*% trans2
+  scales <- sqrt(stats$variances)
+  shoofs <- stats$means
+  x <- sweep(x, 2, scales, `*`)
+  x <- sweep(x, 2, shoofs, `+`)
+  colnames(x) <- paste0("new", 1:ncol(x))
+  return(x)
+}
