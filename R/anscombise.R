@@ -33,8 +33,8 @@ anscombise <- function(x, which = 1) {
   if (anyNA(x)) {
     stop("x must not contain any missing values")
   }
-  if (!is_wholenumber(which) || x < 1 || x > 4) {
-    stop("x must be an integer in {1, 2, 3, 4}")
+  if (!is_wholenumber(which) || which < 1 || which > 4) {
+    stop("which must be an integer in {1, 2, 3, 4}")
   }
   anscombe_data <- anscombe[, c(which, which + 4)]
   anscombe_stats <- get_stats(anscombe_data)
