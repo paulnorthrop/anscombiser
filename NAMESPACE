@@ -3,3 +3,4 @@
 export(anscombise)
 export(get_stats)
 export(make_stats)
+export(mimic)
