@@ -3,9 +3,12 @@
 \name{anscombiser-internal}
 \alias{anscombiser-internal}
 \alias{is_wholenumber}
+\alias{mapdata}
 \title{Internal anscombiser functions}
 \usage{
 is_wholenumber(x, tol = .Machine$double.eps^0.5)
+
+mapdata(region = ".", map = "world", exact = FALSE, ...)
 }
 \description{
 Internal anscombiser functions
