@@ -43,7 +43,7 @@
 #'
 #' dino <- datasaurus_dozen_wide[, c("dino_x", "dino_y")]
 #' dino_stats <- get_stats(dino)
-#' UK <- map_data("world", region = "UK")[, 1:2]
+#' UK <- mapdata("world", region = "UK")[, 1:2]
 #' new_UK <- make_stats(UK, dino_stats)
 #' dino_stats
 #' get_stats(new_UK)
