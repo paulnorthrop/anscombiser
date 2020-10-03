@@ -41,6 +41,12 @@ plot.anscombe <- function(x, input = FALSE, stats = TRUE, digits = 3,
   # Extract attributes
   new_stats <- attr(x, "new_stats")
   old_stats <- attr(x, "old_stats")
+  # Select the dataset to plot
+  if (input) {
+    plot_data <- old_data
+  } else {
+    plot_data <- new_data
+  }
   if (input) {
     n <- old_stats$n
     means <- old_stats$means
@@ -56,7 +62,7 @@ plot.anscombe <- function(x, input = FALSE, stats = TRUE, digits = 3,
     my_plot <- function(x, ..., pch = 16) {
       graphics::plot(x, ..., pch = pch)
     }
-    my_plot(new_data, ...)
+    my_plot(plot_data, ...)
     if (stats) {
       if (is.null(legend_args$x)) {
         legend_args$x <- "topleft"
