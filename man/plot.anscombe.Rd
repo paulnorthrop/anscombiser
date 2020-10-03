@@ -4,7 +4,7 @@
 \alias{plot.anscombe}
 \title{Plot diagnostics for an anscombe object}
 \usage{
-\method{plot}{anscombe}(x, old = FALSE, superimpose = FALSE, ...)
+\method{plot}{anscombe}(x, old = FALSE, ...)
 }
 \arguments{
 \item{x}{an object of class \code{'anscombe'}, a result of a call to \link{anscombise}
