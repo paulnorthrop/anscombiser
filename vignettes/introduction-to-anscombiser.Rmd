@@ -13,7 +13,7 @@ bibliography: anscombiser.bib
 ---
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(comment = "#>", collapse = TRUE)
+knitr::opts_chunk$set(comment = "#>", collapse = TRUE, out.width = '80%', global.par = TRUE, fig.align = 'center', fig.width = 7, fig.height = 5)
 ```
 
 The `anscombiser` package is named after the famous Anscombe's quartet datasets (@anscombe).  Frank Anscombe created these datasets to emphasize the importance of graphical techniques in statistical analyses.  The datasets each consist of 11 pairs of $(x, y)$ points and they have almost exactly the same values of an apparently remarkable number of sample summary statistics.  However, scatter plots of these data reveal that the behaviours exhibited in these datasets are very different.  That inspecting summary statistics can give a very misleading impression of a dataset is an important point for students of Statistics to appreciate.
@@ -22,14 +22,26 @@ The `anscombiser` package is named after the famous Anscombe's quartet datasets 
 
 The `datasauRus` package (@datasauRus) provides further examples of datasets that have markedly different scatter plots but nevertheless share many sample summary statistics.  These datasets were produced by using a simulated annealing algorithm that seeks to morph incrementally an initial dataset towards a target shape while maintaining the same sample summary statistics (@dpaper). In principle, any set of summary statistics can be used.  Indeed, @datasauRus provides not only dataset that have the same values of Anscombe's statistics (essentially sample means, variances and correlation) but also datasets that are constrained to share the same sample median, interquartile range and Spearman's correlation.
 
-The `anscombiser` package takes a simpler and quicker approach to the same problem, using Anscombe's statistics.  It uses shifting, scaling and rotating to transform the observations in an input dataset to achieve a target set of Anscombe's statistics. 
+The `anscombiser` package takes a simpler and quicker approach to the same problem, using Anscombe's statistics.  It uses shifting, scaling and rotating to transform the observations in an input dataset to achieve a target set of Anscombe's statistics.  these statistics can be set by and or by calculating them from a target dataset, perhaps one of the Anscombe quartet.  If the input dataset has statistics that are similar to the target statistics then the output dataset will look rather similar to the input dataset.  Otherwise, the output dataset will be a squashed and/or rotated version of the input dataset, but the general shape of the input dataset will still be visible.  It will be like viewing the input dataset from a different perspective.
 
-shift, scale and rotate
-
-n-dimensional
+Thus, we can easily create many datasets that have different general natures but share the same values of Anscombe's statistics.  In addition, this method works in more than two dimensions. 
 
 ```{r setup}
 library(anscombe)
 ```
 
-@datasauRus
+### Anscombe's quartet
+
+The `anscombise()` function takes an input two-dimensional dataset and outputs a dataset that shares Anscombe's statistics with his quartet of datasets.  The `which` argument chooses which of Anscombe's datasets to use.  Of course, this affects the output datset only minimally but it matters if we want to plot the input dataset, as we do below.
+
+```{r}
+par(mar = c(4, 4, 1, 1))
+new_faithful <- anscombise(datasets::faithful, which = 4)
+plot(new_faithful)
+plot(new_faithful, input = TRUE)
+```
+
+### Other two-dimensional examples
+
+### Three-dimensional examples
+
