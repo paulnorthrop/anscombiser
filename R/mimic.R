@@ -5,8 +5,8 @@
 #'
 #' @param x A numeric matrix or data frame.  Each column contains observations
 #'   on a different variable.  Missing observations are not allowed.
-#' @param which An integer in \{1, 2, 3, 4\}.  Which of Anscombe's dataset to
-#'   use.  Obviously, this makes very little difference.
+#' @param x2 A numeric matrix or data frame.  Each column contains observations
+#'   on a different variable.  Missing observations are not allowed.
 #' @details The input dataset `x` is modified by shifting, scaling and rotating
 #'   it so that its sample mean and covariance matrix match those of `x2`.
 #' @return A dataset with the same format as `x`.  The returned dataset has the

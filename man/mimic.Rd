@@ -10,8 +10,8 @@ mimic(x, x2)
 \item{x}{A numeric matrix or data frame.  Each column contains observations
 on a different variable.  Missing observations are not allowed.}
 
-\item{which}{An integer in \{1, 2, 3, 4\}.  Which of Anscombe's dataset to
-use.  Obviously, this makes very little difference.}
+\item{x2}{A numeric matrix or data frame.  Each column contains observations
+on a different variable.  Missing observations are not allowed.}
 }
 \value{
 A dataset with the same format as \code{x}.  The returned dataset has the
