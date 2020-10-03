@@ -50,6 +50,15 @@ if (got_maps && got_datasauRus) {
   plot(new_UK)
 }
 
+## Trump and a dinosaur
+
+if (got_datasauRus) {
+  library(datasauRus)
+  dino <- datasaurus_dozen_wide[, c("dino_x", "dino_y")]
+  new_dino <- mimic(dino,trump)
+  plot(new_dino)
+}
+
 ## Examples of passing summary statistics
 
 # The default is zero mean, unit variance and no correlation
