@@ -1,5 +1,5 @@
 ---
-title: "Introduction to anscombise"
+title: "Introduction to anscombiser"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to anscombise}
