@@ -50,5 +50,10 @@ mimic <- function(x, x2, ...) {
     stop("x must not contain any missing values")
   }
   new_x <- make_stats(x, x2_stats)
-  return(new_x)
+  # Calculate the summary statistics directly as a check
+  new_stats <- get_stats(new_x)
+  # Save the target and new statistics as attributes, for testing and plotting
+  res <- structure(new_x, new_stats = new_stats, old_stats = x2_stats)
+  class(res) <- c("anscombe", class(res))
+  return(res)
 }
