@@ -9,10 +9,12 @@ Description: Anscombe's quartet are a set of four two-variable datasets that
     distributions.  This becomes apparent when the data are plotted, which 
     illustrates the importance of using graphical displays in Statistics.  This
     package enables the creation of datasets that have identical marginal sample
-    means and sample variances, sample correlation and least squares regression 
-    coefficients.  The user supplies an initial dataset, which is shifted, scaled 
-    and rotated in order to achieve the target summary statistics.  Thus, the 
-    general shape of the initial dataset is retained.  
+    means and sample variances, sample correlation, least squares regression 
+    coefficients and coefficient of determination.  The user supplies an initial 
+    dataset, which is shifted, scaled and rotated in order to achieve target 
+    summary statistics.  The general shape of the initial dataset is retained. 
+    The target statistics can be supplied directly or calculated based on a 
+    user-supplied dataset.
 Imports: 
     datasets,
     graphics,
