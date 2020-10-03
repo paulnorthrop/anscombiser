@@ -24,3 +24,12 @@ mapdata <- function(region = '.', map = "world", exact = FALSE, ...) {
   locs <- na.omit(data.frame(long = locs$x, lat = locs$y))
   return(locs)
 }
+
+# Check positive definiteness of a symmetric matrix
+
+#' @keywords internal
+#' @rdname anscombiser-internal
+is_pos_def <- function(x, tol = 1e-06) {
+  evalues <- eigen(x, symmetric = TRUE)$values
+  return(all(evalues >= -tol * abs(evalues[1L])))
+}
