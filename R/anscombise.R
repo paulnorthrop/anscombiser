@@ -10,8 +10,9 @@
 #' @details The input dataset `x` is modified by shifting, scaling and rotating
 #'   it so that its sample mean and covariance matrix match those of the
 #'   Anscombe quartet.
-#' @return A dataset with the same format as `x`.  The returned dataset has the
-#'  following summary statistics in common with Anscombe's quartet.
+#' @return An object of class `c("anscombe", class(x))`. A dataset with the
+#'   same format as `x`.  The returned dataset has the following summary
+#'   statistics in common with Anscombe's quartet.
 #'   * The sample means of each variable.
 #'   * The sample variances of each variable.
 #'   * The sample correlation matrix.
@@ -34,5 +35,11 @@ anscombise <- function(x, which = 1) {
   }
   anscombe_stats <- get_stats(anscombe[, c(which, which + 4)])
   new_x <- make_stats(x, anscombe_stats)
-  return(new_x)
+  # Calculate the summary statistics directly as a check
+  new_stats <- get_stats(new_x)
+  # Save the target and new statistics as attributes, for testing and plotting
+  res <- structure(new_x, new_stats = new_stats,
+                   anscombe_stats = anscombe_stats)
+  class(res) <- c("anscombe", class(res))
+  return(res)
 }

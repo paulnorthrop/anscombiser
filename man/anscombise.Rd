@@ -14,8 +14,9 @@ on a different variable.  Missing observations are not allowed.}
 use.  Obviously, this makes very little difference.}
 }
 \value{
-A dataset with the same format as \code{x}.  The returned dataset has the
-following summary statistics in common with Anscombe's quartet.
+An object of class \code{c("anscombe", class(x))}. A dataset with the
+same format as \code{x}.  The returned dataset has the following summary
+statistics in common with Anscombe's quartet.
 \itemize{
 \item The sample means of each variable.
 \item The sample variances of each variable.
