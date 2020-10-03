@@ -1,6 +1,6 @@
 #' Create a list of summary statistics
 #'
-#' Creates a list of summary statistics to pass to \code{\link{mimic}}.
+#' Creates a list of summary statistics to pass to [mimic].
 #'
 #' @param d An integer that is no smaller than 2.
 #' @param means A numeric vector of sample means.
@@ -8,7 +8,7 @@
 #' @param correlation A numeric correlation matrix.  None of the off-diagonal
 #'   entries in `correlation` are allowed to be equal to 1 in absolute value.
 #' @details The vectors `means` and `variances` are recycled using
-#'   \code{rep_len} to have length `d`.
+#'   [`rep_len`][rep] to have length `d`.
 #' @return A list containing the following components.
 #'   * `means` a `d`-vector of sample means.
 #'   * `variances` a `d`-vector sample variances.

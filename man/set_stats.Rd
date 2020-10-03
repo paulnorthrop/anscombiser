@@ -25,11 +25,11 @@ A list containing the following components.
 }
 }
 \description{
-Creates a list of summary statistics to pass to \code{\link{mimic}}.
+Creates a list of summary statistics to pass to \link{mimic}.
 }
 \details{
 The vectors \code{means} and \code{variances} are recycled using
-\code{rep_len} to have length \code{d}.
+\code{\link[=rep]{rep_len}} to have length \code{d}.
 }
 \examples{
 # Uncorrelated with zero means and unit variances

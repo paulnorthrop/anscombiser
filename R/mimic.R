@@ -5,10 +5,10 @@
 #'
 #' @param x,x2 Numeric matrices or data frames.  Each column contains observations
 #'   on a different variable.  Missing observations are not allowed.
-#'   \code{\link{get_stats(x2)}} sets the target summary statistics.
-#'   If `x2` is missing then \code{\link{set_stats}} is called with
-#'   `d = ncol(x)` and any additional arguments supplied via `...`.
-#' @param ... Additional arguments to be passed to \code{\link{set_stats}}.
+#'   [get_stats]`(x2)` sets the target summary statistics. If `x2` is missing
+#'   then [set_stats] is called with `d = ncol(x)` and any additional arguments
+#'   supplied via `...`.
+#' @param ... Additional arguments to be passed to [set_stats].
 #' @details The input dataset `x` is modified by shifting, scaling and rotating
 #'   it so that its sample mean and covariance matrix match those of `x2`.
 #' @return A dataset with the same format as `x`.  The returned dataset has the

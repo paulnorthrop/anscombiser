@@ -7,11 +7,10 @@
 \method{plot}{anscombe}(x, ...)
 }
 \arguments{
-\item{x}{an object of class \code{"anscombe"}, a result of a call to
-\code{\link{anscombise}} or \verb{\link{mimic}}.}
+\item{x}{an object of class \code{'anscombe'}, a result of a call to \link{anscombise}
+or \link{mimc}.}
 
-\item{...}{Further arguments to be passed to
-\code{\link[graphics:plot.default]{plot}}.}
+\item{...}{Further arguments to be passed to \code{\link[graphics:plot.default]{plot}}}
 }
 \value{
 Nothing is returned.
@@ -21,13 +20,13 @@ Nothing is returned.
 }
 \details{
 This function is only applicable in 2 or 3 dimensions, that is,
-when \code{length(attr(new_UK, "new_stats")$means)} is 2 or 3.
+when \code{length(attr(x, "new_stats")$means)} is 2 or 3.
 }
 \section{Examples}{
 
-See the examples in \code{\link{anscombise}} and \code{\link{mimic}}.
+See the examples in \link{anscombise} and \link{mimic}.
 }
 
 \seealso{
-\code{\link{anscombise}} and \code{\link{mimic}}.
+\link{anscombise} and \link{mimic}.
 }

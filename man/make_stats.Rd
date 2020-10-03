@@ -25,7 +25,7 @@ size.
 \description{
 Modifies a dataset \code{x} so that it has specified sample summary statistics.
 The summary statistics can be created from a target dataset with the same
-number of variables as \code{x} using \code{\link{get_stats}}.
+number of variables as \code{x} using \link{get_stats}.
 }
 \examples{
 ### 2D examples

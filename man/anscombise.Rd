@@ -27,7 +27,7 @@ regressions of each variable on each other variable.
 }
 \description{
 Modifies a dataset \code{x} so that it shares sample summary statistics with
-\code{\link[datasets:anscombe]{Anscombe's quartet}}.
+\link[datasets:anscombe]{Anscombe's quartet}.
 }
 \details{
 The input dataset \code{x} is modified by shifting, scaling and rotating

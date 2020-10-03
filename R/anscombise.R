@@ -1,7 +1,7 @@
 #' Create new versions of Anscombe's quartet
 #'
 #' Modifies a dataset `x` so that it shares sample summary statistics with
-#' \code{\link[datasets:anscombe]{Anscombe's quartet}}.
+#' [Anscombe's quartet][datasets::anscombe].
 #'
 #' @param x A numeric matrix or data frame.  Each column contains observations
 #'   on a different variable.  Missing observations are not allowed.

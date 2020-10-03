@@ -9,11 +9,11 @@ mimic(x, x2, ...)
 \arguments{
 \item{x, x2}{Numeric matrices or data frames.  Each column contains observations
 on a different variable.  Missing observations are not allowed.
-\code{\link{get_stats(x2)}} sets the target summary statistics.
-If \code{x2} is missing then \code{\link{set_stats}} is called with
-\code{d = ncol(x)} and any additional arguments supplied via \code{...}.}
+\link{get_stats}\code{(x2)} sets the target summary statistics. If \code{x2} is missing
+then \link{set_stats} is called with \code{d = ncol(x)} and any additional arguments
+supplied via \code{...}.}
 
-\item{...}{Additional arguments to be passed to \code{\link{set_stats}}.}
+\item{...}{Additional arguments to be passed to \link{set_stats}.}
 }
 \value{
 A dataset with the same format as \code{x}.  The returned dataset has the
