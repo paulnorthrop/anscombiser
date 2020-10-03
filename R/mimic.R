@@ -22,6 +22,7 @@
 #'   `old_stats` and `new_stats`.
 #'   If `x2` is supplied then it is returned as a attribute `old_data`.
 #' @examples
+#' ## The UK and a dinosaur
 #' got_maps <- requireNamespace("maps", quietly = TRUE)
 #' got_datasauRus <- requireNamespace("datasauRus", quietly = TRUE)
 #' if (got_maps && got_datasauRus) {
@@ -32,6 +33,18 @@
 #'   new_UK <- mimic(UK, dino)
 #'   plot(new_UK)
 #' }
+#'
+#' ## Examples of passing summary statistics
+#'
+#' # The default is zero mean, unit variance and no correlation
+#' new_faithful <- mimic(faithful)
+#' plot(new_faithful)
+#'
+#' # Change the correlation
+#' mat <- matrix(c(1, -0.9, -0.9, 1), 2, 2)
+#' new_faithful <- mimic(faithful, correlation = mat)
+#' plot(new_faithful)
+#'
 #' @export
 #' @md
 mimic <- function(x, x2, ...) {
@@ -58,7 +71,6 @@ mimic <- function(x, x2, ...) {
   # Calculate the summary statistics directly as a check
   new_stats <- get_stats(new_x)
   # Save the target and new statistics as attributes, for testing and plotting
-  if (missing(x2))
   res <- structure(new_x, new_stats = new_stats, old_stats = x2_stats,
                    old_data = old_data)
   class(res) <- c("anscombe", class(res))

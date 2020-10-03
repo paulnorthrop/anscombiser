@@ -38,6 +38,7 @@ The input dataset \code{x} is modified by shifting, scaling and rotating
 it so that its sample mean and covariance matrix match those of \code{x2}.
 }
 \examples{
+## The UK and a dinosaur
 got_maps <- requireNamespace("maps", quietly = TRUE)
 got_datasauRus <- requireNamespace("datasauRus", quietly = TRUE)
 if (got_maps && got_datasauRus) {
@@ -48,4 +49,16 @@ if (got_maps && got_datasauRus) {
   new_UK <- mimic(UK, dino)
   plot(new_UK)
 }
+
+## Examples of passing summary statistics
+
+# The default is zero mean, unit variance and no correlation
+new_faithful <- mimic(faithful)
+plot(new_faithful)
+
+# Change the correlation
+mat <- matrix(c(1, -0.9, -0.9, 1), 2, 2)
+new_faithful <- mimic(faithful, correlation = mat)
+plot(new_faithful)
+
 }
