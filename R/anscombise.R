@@ -38,8 +38,7 @@ anscombise <- function(x, which = 1) {
   # Calculate the summary statistics directly as a check
   new_stats <- get_stats(new_x)
   # Save the target and new statistics as attributes, for testing and plotting
-  res <- structure(new_x, new_stats = new_stats,
-                   anscombe_stats = anscombe_stats)
+  res <- structure(new_x, new_stats = new_stats, old_stats = anscombe_stats)
   class(res) <- c("anscombe", class(res))
   return(res)
 }
