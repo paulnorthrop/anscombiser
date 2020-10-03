@@ -20,7 +20,9 @@ trump <- data.frame(x = x, y = -y)
 plot(trump, pch = 20)
 trump <- subset(trump, trump$y > -610)
 plot(trump, pch = 20)
-trump <- scale(trump)
+trump <- scale(trump) + 1
 plot(trump, pch = 20)
 trump <- trump[, 1:2]
 dim(trump)
+
+use_data(trump)
