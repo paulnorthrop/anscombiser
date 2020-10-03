@@ -33,12 +33,14 @@ get_stats <- function(x) {
    nvar <- ncol(x)
    res$intercepts <- matrix(0, nvar, nvar)
    res$slopes <- matrix(1, nvar, nvar)
+   # Deal with tibbles
+   xdf <- as.data.frame(x)
    for (i in 2:nvar) {
      for (j in 1:(i - 1)) {
-       coefs <- coef(stats::lm(x[[i]] ~ x[[j]]))
+       coefs <- coef(stats::lm(xdf[, i] ~ xdf[, j]))
        res$intercepts[i, j] <- coefs[1]
        res$slopes[i, j] <- coefs[2]
-       coefs <- coef(stats::lm(x[[j]] ~ x[[i]]))
+       coefs <- coef(stats::lm(xdf[, j] ~ xdf[, i]))
        res$slopes[j, i] <- coefs[1]
        res$intercepts[j, i] <- coefs[2]
      }
