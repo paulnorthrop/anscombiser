@@ -34,8 +34,8 @@ Nothing is returned.
 \code{plot} method for objects inheriting from class \code{"anscombe"}.
 }
 \details{
-This function is only applicable in 2 or 3 dimensions, that is,
-when \code{length(attr(x, "new_stats")$means)} is 2 or 3.
+This function is only applicable in 2 dimensions, that is,
+when \code{length(attr(x, "new_stats")$means)} = 2.
 }
 \section{Examples}{
 

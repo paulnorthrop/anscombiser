@@ -18,8 +18,8 @@
 #'   [`legend`][graphics::legend] when `stats = TRUE`, especially
 #'   `legend_args$x` to control the positio of the legend.
 #' @param ... Further arguments to be passed to [`plot`][graphics::plot.default]
-#' @details This function is only applicable in 2 or 3 dimensions, that is,
-#'   when ``length(attr(x, "new_stats")$means)`` is 2 or 3.
+#' @details This function is only applicable in 2 dimensions, that is,
+#'   when ``length(attr(x, "new_stats")$means)`` = 2.
 #' @return Nothing is returned.
 #' @seealso [`anscombise`] and [`mimic`].
 #' @section Examples:
@@ -32,8 +32,8 @@ plot.anscombe <- function(x, input = FALSE, stats = TRUE, digits = 3,
     stop("use only with \"anscombe\" objects")
   }
   d <- length(attr(x, "new_stats")$means)
-  if (d != 2 && d != 3) {
-    stop("The plot method only works for datasets with 2 or 3 variables")
+  if (d != 2) {
+    stop("The plot method only works for datasets with 2 variables")
   }
   # Extract new and old data
   new_data <- x[, 1:2]
@@ -58,27 +58,25 @@ plot.anscombe <- function(x, input = FALSE, stats = TRUE, digits = 3,
     variances <- new_stats$variances
     correlation <- new_stats$correlation
   }
-  if (d == 2) {
-    my_plot <- function(x, ..., pch = 16) {
-      graphics::plot(x, ..., pch = pch)
+  my_plot <- function(x, ..., pch = 16) {
+    graphics::plot(x, ..., pch = pch)
+  }
+  my_plot(plot_data, ...)
+  if (stats) {
+    if (is.null(legend_args$x)) {
+      legend_args$x <- "topleft"
     }
-    my_plot(plot_data, ...)
-    if (stats) {
-      if (is.null(legend_args$x)) {
-        legend_args$x <- "topleft"
-      }
-      if (is.null(legend_args$bty)) {
-        legend_args$bty <- "n"
-      }
-      nleg <- paste("n:", n)
-      mleg <- paste0("means: (", signif(means[1], digits), ",",
-                    signif(means[2], digits), ")")
-      vleg <- paste0("variances: (", signif(variances[1], digits), ",",
-                    signif(variances[2], digits), ")")
-      cleg <- paste("correlation:", signif(correlation[1, 2], digits))
-      legend_args$legend <- c(nleg, mleg, vleg, cleg)
-      do.call(legend, legend_args)
+    if (is.null(legend_args$bty)) {
+      legend_args$bty <- "n"
     }
+    nleg <- paste("n:", n)
+    mleg <- paste0("means: (", signif(means[1], digits), ",",
+                   signif(means[2], digits), ")")
+    vleg <- paste0("variances: (", signif(variances[1], digits), ",",
+                   signif(variances[2], digits), ")")
+    cleg <- paste("correlation:", signif(correlation[1, 2], digits))
+    legend_args$legend <- c(nleg, mleg, vleg, cleg)
+    do.call(legend, legend_args)
   }
   return(invisible())
 }
