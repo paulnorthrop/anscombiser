@@ -1,19 +1,25 @@
 ---
-title: "Introduction to anscombiser"
-output: rmarkdown::html_vignette
+title: "An overview of anscombiser"
+author: "Paul Northrop"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
 vignette: >
-  %\VignetteIndexEntry{Introduction to anscombise}
+  %\VignetteIndexEntry{An overview of anscombiser}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+bibliography: anscombiser.bib
 ---
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
+knitr::opts_chunk$set(comment = "#>", collapse = TRUE)
 ```
+
+## Create datasets with identical summary statistics
 
 ```{r setup}
 library(anscombe)
 ```
+
+@datasauRus
