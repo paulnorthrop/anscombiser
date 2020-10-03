@@ -18,8 +18,9 @@ A named list of summary statistics containing
 \item \code{means} The sample means of each variable.
 \item \code{variances} The sample means of each variable.
 \item \code{correlation} The sample correlation matrix.
-\item \code{intercepts},\code{slopes} Matrices whose (i,j)th entries are the estimated
-regression coefficients in a regression of \code{x[, i]} on \code{x[, j]}.
+\item \code{intercepts},\code{slopes},\code{rsquared} Matrices whose (i,j)th entries are the
+estimated regression coefficients in a regression of \code{x[, i]} on
+\code{x[, j]} and the resulting coefficient of determination \eqn{R^2}.
 }
 }
 \description{

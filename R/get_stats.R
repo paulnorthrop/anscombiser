@@ -11,8 +11,9 @@
 #'   * `means` The sample means of each variable.
 #'   * `variances` The sample means of each variable.
 #'   * `correlation` The sample correlation matrix.
-#'   * `intercepts`,`slopes` Matrices whose (i,j)th entries are the estimated
-#'     regression coefficients in a regression of `x[, i]` on `x[, j]`.
+#'   * `intercepts`,`slopes`,`rsquared` Matrices whose (i,j)th entries are the
+#'     estimated regression coefficients in a regression of `x[, i]` on
+#'     `x[, j]` and the resulting coefficient of determination \eqn{R^2}.
 #' @examples
 #' get_stats(anscombe[, c(1, 5)])
 #' @export
@@ -32,16 +33,21 @@ get_stats <- function(x) {
    nvar <- ncol(x)
    res$intercepts <- matrix(0, nvar, nvar)
    res$slopes <- matrix(1, nvar, nvar)
+   res$rsquared <- matrix(1, nvar, nvar)
    # Deal with tibbles
    xdf <- as.data.frame(x)
    for (i in 2:nvar) {
      for (j in 1:(i - 1)) {
-       coefs <- coef(stats::lm(xdf[, i] ~ xdf[, j]))
+       fit <- stats::lm(xdf[, i] ~ xdf[, j])
+       coefs <- coef(fit)
        res$intercepts[i, j] <- coefs[1]
        res$slopes[i, j] <- coefs[2]
-       coefs <- coef(stats::lm(xdf[, j] ~ xdf[, i]))
+       res$rsquared[i, j] <- summary(fit)$r.squared
+       fit <- stats::lm(xdf[, j] ~ xdf[, i])
+       coefs <- coef(fit)
        res$slopes[j, i] <- coefs[1]
        res$intercepts[j, i] <- coefs[2]
+       res$rsquared[j, i] <- summary(fit)$r.squared
      }
    }
    dimnames(res$intercepts) <- list(colnames(x), colnames(x))
