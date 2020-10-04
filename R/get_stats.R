@@ -43,7 +43,7 @@ get_stats <- function(x) {
        res$slopes[i, j] <- coefs[2]
        res$rsquared[i, j] <- summary(fit)$r.squared
        fit <- stats::lm(xdf[, j] ~ xdf[, i])
-       coefs <- coef(fit)
+       coefs <- stats::coef(fit)
        res$slopes[j, i] <- coefs[1]
        res$intercepts[j, i] <- coefs[2]
        res$rsquared[j, i] <- summary(fit)$r.squared
