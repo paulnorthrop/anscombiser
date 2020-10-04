@@ -6,7 +6,7 @@
 #' @param region Passed to [`map`][maps::map] as the argument `regions`.
 #' @param map Passed to [`map`][maps::map] as the argument `database`
 #' @param exact The argument `exact` passed to the [`map`][maps::map] function.
-#' @param ... Additionl arguments to be passed to [`map`][maps::map].
+#' @param ... Additional arguments to be passed to [`map`][maps::map].
 #' @return A dataframe with two columns: `long` and `lat` for longitude and
 #'   latitude.
 #' @section Examples:

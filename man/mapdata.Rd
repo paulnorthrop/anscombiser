@@ -13,7 +13,7 @@ mapdata(region = ".", map = "world", exact = FALSE, ...)
 
 \item{exact}{The argument \code{exact} passed to the \code{\link[maps:map]{map}} function.}
 
-\item{...}{Additionl arguments to be passed to \code{\link[maps:map]{map}}.}
+\item{...}{Additional arguments to be passed to \code{\link[maps:map]{map}}.}
 }
 \value{
 A dataframe with two columns: \code{long} and \code{lat} for longitude and
