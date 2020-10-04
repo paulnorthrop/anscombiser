@@ -32,5 +32,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-URL: https://github.com/paulnorthrop/anscombiser, https://paulnorthrop.github.io/anscombiser/
+URL: https://paulnorthrop.github.io/anscombiser/, https://github.com/paulnorthrop/anscombiser
 BugReports: https://github.com/paulnorthrop/anscombiser/issues
