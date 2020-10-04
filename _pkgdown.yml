@@ -1,0 +1,31 @@
+destination: docs
+
+development:
+  mode: unreleased
+
+template:
+  params:
+    bootswatch: paper
+
+reference:
+  - title: Package
+    desc: ~
+    contents:
+      - "anscombiser"
+  - title: Create datasets with identical summary statistics
+    desc: ~
+    contents:
+      - "anscombise"
+      - "mimic"
+      - "get_stats"
+      - "set_stats"
+  - title: Example data
+    desc: ~
+    contents:
+      - "mapdata"
+      - "trump"
+  - title: Generics
+    desc: ~
+    contents:
+      - "plot.anscombe"
+      - "print.anscombe"
