@@ -1,7 +1,7 @@
-#' Modify a dataset to achieve certain target sample summary statistics
+#' Modify a dataset to mimic another dataset
 #'
 #' Modifies a dataset `x` so that it shares sample summary statistics with
-#' another dataset `x2`.  Alternatively, the summary statistics themselves
+#' another dataset `x2`.  `
 #'
 #' @param x,x2 Numeric matrices or data frames.  Each column contains observations
 #'   on a different variable.  Missing observations are not allowed.
@@ -21,6 +21,8 @@
 #'   The target and new summary statistics are returned as attributes
 #'   `old_stats` and `new_stats`.
 #'   If `x2` is supplied then it is returned as a attribute `old_data`.
+#' @seealso [`anscombise`] modifies a dataset so that it shares sample summary
+#'   statistics with [Anscombe's quartet][datasets::anscombe].
 #' @examples
 #' ### 2D examples
 #'

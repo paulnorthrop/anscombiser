@@ -2,7 +2,7 @@
 % Please edit documentation in R/mimic.R
 \name{mimic}
 \alias{mimic}
-\title{Modify a dataset to achieve certain target sample summary statistics}
+\title{Modify a dataset to mimic another dataset}
 \usage{
 mimic(x, x2, ...)
 }
@@ -31,7 +31,7 @@ If \code{x2} is supplied then it is returned as a attribute \code{old_data}.
 }
 \description{
 Modifies a dataset \code{x} so that it shares sample summary statistics with
-another dataset \code{x2}.  Alternatively, the summary statistics themselves
+another dataset \code{x2}.  `
 }
 \details{
 The input dataset \code{x} is modified by shifting, scaling and rotating
@@ -77,4 +77,8 @@ new_randu <- mimic(datasets::randu, datasets::trees)
 # The samples summary statistics are equal
 get_stats(new_randu)
 get_stats(datasets::trees)
+}
+\seealso{
+\code{\link{anscombise}} modifies a dataset so that it shares sample summary
+statistics with \link[datasets:anscombe]{Anscombe's quartet}.
 }
