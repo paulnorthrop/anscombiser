@@ -36,7 +36,7 @@ make_stats <- function(x, stats) {
   # Shift and scale to zero means and unit variances
   x <- scale(x)
   # Input sample correlation matrix
-  s1 <- cor(x)
+  s1 <- stats::cor(x)
   # Rotate to zero sample correlation
   trans1 <- chol(solve(s1))
   x <- t(trans1 %*% t(x))

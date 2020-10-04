@@ -76,7 +76,7 @@ plot.anscombe <- function(x, input = FALSE, stats = TRUE, digits = 3,
                    signif(variances[2], digits), ")")
     cleg <- paste("correlation:", signif(correlation[1, 2], digits))
     legend_args$legend <- c(nleg, mleg, vleg, cleg)
-    do.call(legend, legend_args)
+    do.call(graphics::legend, legend_args)
   }
   return(invisible())
 }

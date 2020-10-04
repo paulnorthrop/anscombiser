@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot.R
 \name{plot.anscombe}
 \alias{plot.anscombe}
-\title{Plot diagnostics for an anscombe object}
+\title{Plot method for objects of class "anscombe"}
 \usage{
 \method{plot}{anscombe}(x, input = FALSE, stats = TRUE, digits = 3, legend_args = list(), ...)
 }
@@ -23,7 +23,7 @@ to round the values of the statistics before adding them to the plot.}
 
 \item{legend_args}{A list of arguments to be passed to
 \code{\link[graphics:legend]{legend}} when \code{stats = TRUE}, especially
-\code{legend_args$x} to control the positio of the legend.}
+\code{legend_args$x} to control the position of the legend.}
 
 \item{...}{Further arguments to be passed to \code{\link[graphics:plot.default]{plot}}}
 }

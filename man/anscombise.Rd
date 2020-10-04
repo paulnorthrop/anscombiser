@@ -24,8 +24,8 @@ statistics in common with Anscombe's quartet.
 \item The estimated regression coefficients from least squares linear
 regressions of each variable on each other variable.
 The target and new summary statistics are returned as attributes
-\code{old_stats} and \code{new_stats} and the anscombe dataset used as a attribute
-\code{old_data}.
+\code{old_stats} and \code{new_stats} and the chosen Anscombe's quartet dataset as
+an attribute \code{old_data}.
 }
 }
 \description{

@@ -49,7 +49,7 @@ anscombise <- function(x, which = 1) {
   if (!is_wholenumber(which) || which < 1 || which > 4) {
     stop("which must be an integer in {1, 2, 3, 4}")
   }
-  anscombe_data <- anscombe[, c(which, which + 4)]
+  anscombe_data <- datasets::anscombe[, c(which, which + 4)]
   anscombe_stats <- get_stats(anscombe_data)
   new_x <- make_stats(x, anscombe_stats)
   # Calculate the summary statistics directly as a check
