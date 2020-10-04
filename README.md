@@ -9,7 +9,6 @@ Status](https://travis-ci.org/paulnorthrop/anscombiser.svg?branch=master)](https
 Status](https://ci.appveyor.com/api/projects/status/github/paulnorthrop/anscombiser?branch=master&svg=true)](https://ci.appveyor.com/project/paulnorthrop/anscombiser)
 [![Coverage
 Status](https://codecov.io/github/paulnorthrop/anscombiser/coverage.svg?branch=master)](https://codecov.io/github/paulnorthrop/anscombiser?branch=master)
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/anscombiser)](https://cran.r-project.org/package=anscombiser)
 
 ## Title
 
