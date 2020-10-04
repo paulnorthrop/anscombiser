@@ -28,7 +28,7 @@ The `anscombiser` package takes a simpler and quicker approach to the same probl
 Thus, we can easily create many datasets that have different general natures but share the same values of Anscombe's statistics.  In addition, this method works in more than two dimensions. 
 
 ```{r setup}
-library(anscombe)
+library(anscombiser)
 ```
 
 ### Anscombe's quartet
