@@ -4,11 +4,11 @@
 # anscombiser
 
 [![Travis-CI Build
-Status](https://travis-ci.org/paulnorthrop/anscombiser.svg?branch=master)](https://travis-ci.org/paulnorthrop/anscombiser)
+Status](https://travis-ci.org/paulnorthrop/anscombiser.svg?branch=main)](https://travis-ci.org/paulnorthrop/anscombiser)
 [![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/paulnorthrop/anscombiser?branch=master&svg=true)](https://ci.appveyor.com/project/paulnorthrop/anscombiser)
+Status](https://ci.appveyor.com/api/projects/status/github/paulnorthrop/anscombiser?branch=main&svg=true)](https://ci.appveyor.com/project/paulnorthrop/anscombiser)
 [![Coverage
-Status](https://codecov.io/github/paulnorthrop/anscombiser/coverage.svg?branch=master)](https://codecov.io/github/paulnorthrop/anscombiser?branch=master)
+Status](https://codecov.io/github/paulnorthrop/anscombiser/coverage.svg?branch=main)](https://codecov.io/github/paulnorthrop/anscombiser?branch=master)
 
 ## Title
 
