@@ -20,7 +20,7 @@
 #'     sample summary statistics with another user-supplied dataset.
 #'
 #'   See \code{vignette("intro-to-anscombiser", package = "anscombiser")} for
-#'   an overview of the package.#'
+#'   an overview of the package.
 #' @references Anscombe, F. J. (1973). Graphs in Statistical Analysis.
 #'   The American Statistician 27 (1): 17–21.
 #'   \url{https://doi.org/10.1080/00031305.1973.10478966}.
