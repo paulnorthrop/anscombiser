@@ -2,7 +2,7 @@
 
 #' Print method for objects of class "anscombe"
 #'
-#' \code{print} method for class "anscombe".
+#' `print` method for class "anscombe".
 #'
 #' @param x an object of class "anscombe", a result of a call to [`anscombise`]
 #'   or [`mimic`].
@@ -10,8 +10,7 @@
 #'   [`print`][print.default].
 #' @details Just extracts the new dataset from `x` and prints it using
 #'   [`print`][print.default].
-#' @return The argument \code{x}, invisibly, as for all
-#'   \code{\link[base]{print}} methods.
+#' @return The argument `x`, invisibly.
 #' @seealso [`anscombise`] and [`mimic`]
 #' @export
 #' @md

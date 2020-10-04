@@ -14,8 +14,7 @@ or \code{\link{mimic}}.}
 \code{\link[=print.default]{print}}.}
 }
 \value{
-The argument \code{x}, invisibly, as for all
-\code{\link[base]{print}} methods.
+The argument \code{x}, invisibly.
 }
 \description{
 \code{print} method for class "anscombe".
