@@ -7,13 +7,13 @@ cache: packages
 warnings_are_errors: true
 
 os:
-#  - linux
-  - osx
+  - linux
+#  - osx
 
 r:
-  - release
-#  - devel
-  - oldrel
+#  - release
+  - devel
+#  - oldrel
 
 r_packages:
   - covr

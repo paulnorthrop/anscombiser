@@ -1,6 +1,6 @@
 Package: anscombiser
 Title: Create datasets with identical summary statistics
-Version: 1.0.0.9000
+Version: 1.0.0
 Date: 2020-10-04
 Authors@R: person(c("Paul", "J."), "Northrop", email = "p.northrop@ucl.ac.uk",
   role = c("aut", "cre", "cph"))
