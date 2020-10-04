@@ -38,11 +38,13 @@ it so that its sample mean and covariance matrix match those of the
 Anscombe quartet.
 }
 \examples{
+# Old faithful to new faithful
 new_faithful <- anscombise(datasets::faithful, which = 4)
 plot(new_faithful)
 # Then check that the sample summary statistics are the same
 plot(new_faithful, input = TRUE)
 
+# Map of Italy
 got_maps <- requireNamespace("maps", quietly = TRUE)
 if (got_maps) {
   italy <- mapdata("Italy")
