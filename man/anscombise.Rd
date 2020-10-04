@@ -50,3 +50,7 @@ if (got_maps) {
   plot(new_italy)
 }
 }
+\seealso{
+\code{\link{mimic}} to modify a dataset to share sample summary statistics
+with another dataset.
+}

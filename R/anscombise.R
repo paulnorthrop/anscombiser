@@ -21,6 +21,8 @@
 #'   The target and new summary statistics are returned as attributes
 #'   `old_stats` and `new_stats` and the anscombe dataset used as a attribute
 #'   `old_data`.
+#' @seealso [`mimic`] to modify a dataset to share sample summary statistics
+#'   with another dataset.
 #' @examples
 #' new_faithful <- anscombise(datasets::faithful, which = 4)
 #' plot(new_faithful)
