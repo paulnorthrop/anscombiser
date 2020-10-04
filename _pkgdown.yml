@@ -12,7 +12,7 @@ reference:
     desc: ~
     contents:
       - "anscombiser"
-  - title: Create datasets with identical summary statistics
+  - title: Create Datasets with Identical Summary Statistics
     desc: ~
     contents:
       - "anscombise"

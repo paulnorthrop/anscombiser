@@ -1,4 +1,4 @@
-#' anscombiser: Create datasets with identical summary statistics
+#' anscombiser: Create Datasets with Identical Summary Statistics
 #'
 #' Anscombe's quartet (Anscombe, 1973) are a set of four two-variable datasets
 #' that have several common summary statistics but which have very different
