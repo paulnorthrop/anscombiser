@@ -11,8 +11,8 @@ os:
 #  - osx
 
 r:
-  - release
-#  - devel
+#  - release
+  - devel
 #  - oldrel
 
 r_packages:
