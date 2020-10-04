@@ -24,8 +24,7 @@ estimated regression coefficients in a regression of \code{x[, i]} on
 }
 }
 \description{
-Calculates a particular set of summary statistics for a dataset and returns
-them in a form that can be used as the argument \code{stats} in \code{\link{make_stats}}.
+Calculates a particular set of summary statistics for a dataset.
 }
 \examples{
 get_stats(anscombe[, c(1, 5)])

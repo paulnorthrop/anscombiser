@@ -1,7 +1,6 @@
 #' Calculate Anscombe's summary statistics
 #'
-#' Calculates a particular set of summary statistics for a dataset and returns
-#' them in a form that can be used as the argument `stats` in [`make_stats`].
+#' Calculates a particular set of summary statistics for a dataset.
 #'
 #' @param x a numeric matrix or data frame with at least 2 columns/variables.
 #'   Each column contains observations on a different variable.  Missing
