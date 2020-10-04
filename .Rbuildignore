@@ -1,3 +1,13 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^create_data$
+^README\.Rmd$
+^\.travis\.yml$
+^appveyor\.yml$
+^docs$
+^doc$
+^Meta$
+^cran-comments\.md$
+^CRAN-RELEASE$
+^_pkgdown\.yml$
+^pkgdown$
