@@ -33,7 +33,7 @@ library(anscombiser)
 
 ### Anscombe's quartet
 
-The `anscombise()` function takes an input two-dimensional dataset and outputs a dataset that shares Anscombe's statistics with his quartet of datasets.  The `which` argument chooses which of Anscombe's datasets to use.  Of course, this affects the output datset only minimally but it matters if we want to plot the input dataset, as we do below.
+The `anscombise()` function takes an input two-dimensional dataset and outputs a dataset that shares Anscombe's statistics with his quartet of datasets.  The `which` argument chooses which of Anscombe's datasets to use.  Of course, this affects the output dataset only minimally but it matters if we want to plot the input dataset, as we do below.
 
 ```{r par, echo = FALSE}
 par(mar = c(4, 4, 1, 1))
@@ -55,7 +55,7 @@ plot(new_italy)
 
 ### Other two-dimensional examples
 
-The `mimic()` function of the `anscombiser` package transforms an input dataset, as outlined above, to mimic another dataset, in the sense of replicating its values of Anscombe's statistics.  A particularly effective feature of the `datasauRus` package is a dataset that draws a picture of a dinosaur.  Here, we show that a plot of the outline of the coast of the UK needs little adjustment to replicate the sample summart statistics of the dinosaur dataset.   
+The `mimic()` function of the `anscombiser` package transforms an input dataset, as outlined above, to mimic another dataset, in the sense of replicating its values of Anscombe's statistics.  A particularly effective feature of the `datasauRus` package is a dataset that draws a picture of a dinosaur.  Here, we show that a plot of the outline of the coast of the UK needs little adjustment to replicate the sample summary statistics of the dinosaur dataset.   
 
 ```{r check, echo = FALSE}
 got_datasauRus <- requireNamespace("datasauRus", quietly = TRUE)

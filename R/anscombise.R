@@ -19,8 +19,8 @@
 #'   * The estimated regression coefficients from least squares linear
 #'     regressions of each variable on each other variable.
 #'   The target and new summary statistics are returned as attributes
-#'   `old_stats` and `new_stats` and the anscombe dataset used as a attribute
-#'   `old_data`.
+#'   `old_stats` and `new_stats` and the chosen Anscombe's quartet dataset as
+#'   an attribute `old_data`.
 #' @seealso [`mimic`] to modify a dataset to share sample summary statistics
 #'   with another dataset.
 #' @examples

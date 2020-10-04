@@ -1,6 +1,6 @@
 # ========================== Plot method for anscombe ======================= #
 
-#' Plot diagnostics for an anscombe object
+#' Plot method for objects of class "anscombe"
 #'
 #' `plot` method for objects inheriting from class `"anscombe"`.
 #'
@@ -16,7 +16,7 @@
 #'   to round the values of the statistics before adding them to the plot.
 #' @param legend_args A list of arguments to be passed to
 #'   [`legend`][graphics::legend] when `stats = TRUE`, especially
-#'   `legend_args$x` to control the positio of the legend.
+#'   `legend_args$x` to control the position of the legend.
 #' @param ... Further arguments to be passed to [`plot`][graphics::plot.default]
 #' @details This function is only applicable in 2 dimensions, that is,
 #'   when ``length(attr(x, "new_stats")$means)`` = 2.
