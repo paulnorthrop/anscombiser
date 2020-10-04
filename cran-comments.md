@@ -9,6 +9,12 @@
 - win-builder (R-release)
 - solaris-x86-patched using r-hub
 
+## win-builder check
+
+Possibly mis-spelled words in DESCRIPTION: Anscombe's
+which is a false positive  
+
 ## Downstream dependencies
 
 None
+
