@@ -9,7 +9,7 @@
 #' @return A dataframe with two columns: `long` and `lat` for longitude and
 #'   latitude.
 #' @section Examples:
-#' See examples in [`mimic`].
+#' See the examples in [`mimic`].
 #' @export
 #' @md
 mapdata <- function(region = '.', map = "world", exact = FALSE, ...) {

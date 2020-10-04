@@ -23,6 +23,6 @@ world map supplied by the maps package.
 }
 \section{Examples}{
 
-See examples in \code{\link{mimic}}.
+See the examples in \code{\link{mimic}}.
 }
 
