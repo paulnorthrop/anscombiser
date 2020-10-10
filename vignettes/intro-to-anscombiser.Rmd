@@ -36,7 +36,8 @@ library(anscombiser)
 The `anscombise()` function takes an input two-dimensional dataset and outputs a dataset that shares Anscombe's statistics with his quartet of datasets.  The `which` argument chooses which of Anscombe's datasets to use.  Of course, this affects the output dataset only minimally but it matters if we want to plot the input dataset, as we do below.
 
 ```{r par, echo = FALSE}
-par(mar = c(4, 4, 1, 1))
+opar <- graphics::par(no.readonly = TRUE)
+graphics::par(mar = c(4, 4, 1, 1))
 ```
 
 ```{r anscombe}
@@ -100,3 +101,7 @@ pairs(new_randu)
 ```
 
 It is well-known that in three-dimensional displays of the `randu` data non-random structure is evident, but this isn't evident in these pairwise displays. 
+
+```{r resetpar, echo = FALSE}
+graphics::par(opar)
+```
