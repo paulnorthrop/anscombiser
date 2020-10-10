@@ -14,7 +14,10 @@ Description: Anscombe's quartet are a set of four two-variable datasets that
     dataset, which is shifted, scaled and rotated in order to achieve target 
     summary statistics.  The general shape of the initial dataset is retained. 
     The target statistics can be supplied directly or calculated based on a 
-    user-supplied dataset.
+    user-supplied dataset.  The 'datasauRus' package 
+    <https://cran.r-project.org/package=datasauRus> provides further examples 
+    of datasets that have markedly different scatter plots but share many 
+    sample summary statistics.
 Imports: 
     datasets,
     graphics,
