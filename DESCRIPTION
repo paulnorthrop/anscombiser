@@ -1,7 +1,7 @@
 Package: anscombiser
 Title: Create Datasets with Identical Summary Statistics
-Version: 1.0.0
-Date: 2020-10-10
+Version: 1.0.0.9000
+Date: 2020-10-12
 Authors@R: person(c("Paul", "J."), "Northrop", email = "p.northrop@ucl.ac.uk",
   role = c("aut", "cre", "cph"))
 Description: Anscombe's quartet are a set of four two-variable datasets that 
