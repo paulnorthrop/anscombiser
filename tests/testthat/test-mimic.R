@@ -1,4 +1,4 @@
-context("mimic")
+#context("mimic")
 
 new_faithful <- mimic(datasets::faithful, datasets::anscombe[, c(4, 8)])
 stats1 <- get_stats(new_faithful)
@@ -8,7 +8,7 @@ stats1$n <- NULL
 stats2$n <- NULL
 
 test_that("mimic: new faithful and Anscombe 4 has same stats", {
-  testthat::expect_equivalent(stats1, stats2)
+  testthat::expect_equal(stats1, stats2, ignore_attr = TRUE)
 })
 
 #

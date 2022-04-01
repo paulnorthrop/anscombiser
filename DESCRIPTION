@@ -37,3 +37,4 @@ Suggests:
 VignetteBuilder: knitr
 URL: https://paulnorthrop.github.io/anscombiser/, https://github.com/paulnorthrop/anscombiser
 BugReports: https://github.com/paulnorthrop/anscombiser/issues
+Config/testthat/edition: 3
