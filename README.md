@@ -13,8 +13,6 @@ Status](https://codecov.io/github/paulnorthrop/anscombiser/coverage.svg?branch=m
 [![Downloads
 (total)](https://cranlogs.r-pkg.org/badges/grand-total/anscombiser?color=brightgreen)](https://cran.r-project.org/package=anscombiser)
 
-## Title
-
 ### What does anscombiser do?
 
 Anscombe’s quartet are a set of four two-variable datasets that have

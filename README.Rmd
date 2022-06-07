@@ -22,8 +22,6 @@ knitr::opts_chunk$set(
 [![Downloads (monthly)](https://cranlogs.r-pkg.org/badges/anscombiser?color=brightgreen)](https://cran.r-project.org/package=anscombiser)
 [![Downloads (total)](https://cranlogs.r-pkg.org/badges/grand-total/anscombiser?color=brightgreen)](https://cran.r-project.org/package=anscombiser)
 
-## Title
-
 ### What does anscombiser do?
 
 Anscombe's quartet are a set of four two-variable datasets that have several common summary statistics (essentially means, variances and correlation) but which have very different joint distributions.  This becomes apparent when the data are plotted, which illustrates the importance of using graphical displays in Statistics.  The `anscombiser` package provides a quick and easy way to create several datasets that have common values for Anscombe's summary statistics but display very different behaviour when plotted.  It does this by transforming (shifting, scaling and rotating) the dataset to achieve target summary statistics.
