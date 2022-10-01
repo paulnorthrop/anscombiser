@@ -31,7 +31,7 @@ If \code{x2} is supplied then it is returned as a attribute \code{old_data}.
 }
 \description{
 Modifies a dataset \code{x} so that it shares sample summary statistics with
-another dataset \code{x2}.  `
+another dataset \code{x2}.
 }
 \details{
 The input dataset \code{x} is modified by shifting, scaling and rotating

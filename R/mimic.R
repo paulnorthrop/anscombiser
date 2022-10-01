@@ -1,7 +1,7 @@
 #' Modify a dataset to mimic another dataset
 #'
 #' Modifies a dataset `x` so that it shares sample summary statistics with
-#' another dataset `x2`.  `
+#' another dataset `x2`.
 #'
 #' @param x,x2 Numeric matrices or data frames.  Each column contains observations
 #'   on a different variable.  Missing observations are not allowed.
