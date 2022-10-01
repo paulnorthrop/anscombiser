@@ -67,8 +67,11 @@ anscombise <- function(x, which = 1, idempotent = TRUE) {
   if (!is_wholenumber(which) || which < 1 || which > 4) {
     stop("which must be an integer in {1, 2, 3, 4}")
   }
-  anscombe_data <- switch(which, "1" = anscombe1, "2" = anscombe2,
-                          "3" = anscombe3, "4" = anscombe4)
+  anscombe_data <- switch(which,
+                          "1" = anscombiser::anscombe1,
+                          "2" = anscombiser::anscombe2,
+                          "3" = anscombiser::anscombe3,
+                          "4" = anscombiser::anscombe4)
   anscombe_stats <- get_stats(anscombe_data)
   new_x <- make_stats(x, anscombe_stats, idempotent = idempotent)
   # Calculate the summary statistics directly as a check
