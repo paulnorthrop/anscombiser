@@ -7,9 +7,22 @@
 #'   on a different variable.  Missing observations are not allowed.
 #' @param which An integer in \{1, 2, 3, 4\}.  Which of Anscombe's dataset to
 #'   use.  Obviously, this makes very little difference.
+#' @param idempotent A logical scalar. If `idempotent = TRUE` then applying
+#'  `anscombise` to one of the datsets in Anscombe's Quartet will return
+#'  the dataset unchanged. If `idempotent = FALSE` then the returned dataset
+#'  will be a rotated version of the original dataset, with the same summary
+#'  statistics. See **Details**.
 #' @details The input dataset `x` is modified by shifting, scaling and rotating
 #'   it so that its sample mean and covariance matrix match those of the
 #'   Anscombe quartet.
+#'
+#'   The rotation is based on the square root of the sample correlation
+#'   matrix. If `idempotent = FALSE` then this square root is based
+#'   on the Cholesky decomposition this matrix, using [`chol`]. If
+#'   `idempotent = TRUE` the square root is based on the spectral decomposition
+#'   of this matrix, using [`eigen`]. This is a minimal rotation square root,
+#'   which means that if the input data already have the required summary
+#'   statistics then the dataset is returned unchanged.
 #' @return An object of class `c("anscombe", class(x))`. A dataset with the
 #'   same format as `x`.  The returned dataset has the following summary
 #'   statistics in common with Anscombe's quartet.
@@ -40,7 +53,7 @@
 #' }
 #' @export
 #' @md
-anscombise <- function(x, which = 1) {
+anscombise <- function(x, which = 1, idempotent = TRUE) {
   if (!is.matrix(x) && !is.data.frame(x)) {
     stop("x must be a matrix or a dataframe")
   }
@@ -52,7 +65,7 @@ anscombise <- function(x, which = 1) {
   }
   anscombe_data <- datasets::anscombe[, c(which, which + 4)]
   anscombe_stats <- get_stats(anscombe_data)
-  new_x <- make_stats(x, anscombe_stats)
+  new_x <- make_stats(x, anscombe_stats, idempotent = idempotent)
   # Calculate the summary statistics directly as a check
   new_stats <- get_stats(new_x)
   # Save the target and new statistics as attributes, for testing and plotting

@@ -4,7 +4,7 @@
 \alias{anscombise}
 \title{Create new versions of Anscombe's quartet}
 \usage{
-anscombise(x, which = 1)
+anscombise(x, which = 1, idempotent = TRUE)
 }
 \arguments{
 \item{x}{A numeric matrix or data frame.  Each column contains observations
@@ -12,6 +12,12 @@ on a different variable.  Missing observations are not allowed.}
 
 \item{which}{An integer in \{1, 2, 3, 4\}.  Which of Anscombe's dataset to
 use.  Obviously, this makes very little difference.}
+
+\item{idempotent}{A logical scalar. If \code{idempotent = TRUE} then applying
+\code{anscombise} to one of the datsets in Anscombe's Quartet will return
+the dataset unchanged. If \code{idempotent = FALSE} then the returned dataset
+will be a rotated version of the original dataset, with the same summary
+statistics. See \strong{Details}.}
 }
 \value{
 An object of class \code{c("anscombe", class(x))}. A dataset with the
@@ -36,6 +42,14 @@ Modifies a dataset \code{x} so that it shares sample summary statistics with
 The input dataset \code{x} is modified by shifting, scaling and rotating
 it so that its sample mean and covariance matrix match those of the
 Anscombe quartet.
+
+The rotation is based on the square root of the sample correlation
+matrix. If \code{idempotent = FALSE} then this square root is based
+on the Cholesky decomposition this matrix, using \code{\link{chol}}. If
+\code{idempotent = TRUE} the square root is based on the spectral decomposition
+of this matrix, using \code{\link{eigen}}. This is a minimal rotation square root,
+which means that if the input data already have the required summary
+statistics then the dataset is returned unchanged.
 }
 \examples{
 # Old faithful to new faithful
