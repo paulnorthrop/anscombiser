@@ -4,7 +4,7 @@
 \alias{mimic}
 \title{Modify a dataset to mimic another dataset}
 \usage{
-mimic(x, x2, ...)
+mimic(x, x2, idempotent = TRUE, ...)
 }
 \arguments{
 \item{x, x2}{Numeric matrices or data frames.  Each column contains observations
@@ -14,12 +14,12 @@ then \code{\link{set_stats}} is called with \code{d = ncol(x)} and any additiona
 supplied via \code{...}.  This can be used to set target summary statistics
 (means, variances and/or correlations).}
 
-\item{...}{Additional arguments to be passed to \code{\link{set_stats}}.}
-
 \item{idempotent}{A logical scalar. If \code{idempotent = TRUE} then
 \code{mimic(x, x)} returns \code{x}, apart from a change of \code{\link{class}}. If
 \code{idempotent = FALSE} then the returned dataset may be a rotated version of
 the original dataset, with the same summary statistics. See \strong{Details}.}
+
+\item{...}{Additional arguments to be passed to \code{\link{set_stats}}.}
 }
 \value{
 An object of class \code{c("anscombe", "matrix", "array")} with
