@@ -17,4 +17,7 @@ trump
 \description{
 A dataset that provides an image of Donald Trump's face.
 }
+\examples{
+plot(trump)
+}
 \keyword{datasets}

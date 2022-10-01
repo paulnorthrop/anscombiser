@@ -40,5 +40,7 @@ NULL
 #' @format A matrix with 4885 rows and 2 columns: `x` and `y`.
 #' @source This image was created by Accentaur from the Noun Project.
 #' \url{https://thenounproject.com/term/donald-trump/727774/}
+#' @examples
+#' plot(trump)
 #' @md
 "trump"
