@@ -26,26 +26,39 @@ is_pos_def <- function(x, tol = 1e-06) {
 
 #' @keywords internal
 #' @rdname anscombiser-internal
-make_stats <- function(x, stats) {
+minimal_rotation <- function(x) {
+  z <- eigen(x, symmetric = TRUE)
+  return(z$vectors %*% diag(sqrt(z$values)) %*% t(z$vectors))
+}
+
+#' @keywords internal
+#' @rdname anscombiser-internal
+make_stats <- function(x, stats, idempotent = FALSE) {
   if (!is.matrix(x) && !is.data.frame(x)) {
     stop("x must be a matrix or a dataframe")
   }
   if (anyNA(x)) {
     stop("x must not contain any missing values")
   }
+  # Set the rotation function
+  if (idempotent) {
+    rotation_fn <- minimal_rotation
+  } else {
+    rotation_fn <- chol
+  }
   # Shift and scale to zero means and unit variances
   x <- scale(x)
   # Input sample correlation matrix
   s1 <- stats::cor(x)
   # Rotate to zero sample correlation
-  trans1 <- chol(solve(s1))
+  trans1 <- rotation_fn(solve(s1))
   x <- t(trans1 %*% t(x))
   # Shift and scale again
   x <- scale(x)
   # Target sample correlation
   s2 <- stats$correlation
   # Rotate to target sample correlation
-  trans2 <- chol(s2)
+  trans2 <- rotation_fn(s2)
   x <- x %*% trans2
   scales <- sqrt(stats$variances)
   shoofs <- stats$means

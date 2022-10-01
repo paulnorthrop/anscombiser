@@ -4,6 +4,7 @@
 \alias{anscombiser-internal}
 \alias{is_wholenumber}
 \alias{is_pos_def}
+\alias{minimal_rotation}
 \alias{make_stats}
 \title{Internal anscombiser functions}
 \usage{
@@ -11,7 +12,9 @@ is_wholenumber(x, tol = .Machine$double.eps^0.5)
 
 is_pos_def(x, tol = 1e-06)
 
-make_stats(x, stats)
+minimal_rotation(x)
+
+make_stats(x, stats, idempotent = FALSE)
 }
 \description{
 Internal anscombiser functions
