@@ -60,6 +60,7 @@ make_stats <- function(x, stats, idempotent = FALSE) {
   # Rotate to target sample correlation
   trans2 <- rotation_fn(s2)
   x <- x %*% trans2
+  # Shoof and scale back to achieve the target means and variances
   scales <- sqrt(stats$variances)
   shoofs <- stats$means
   x <- sweep(x, 2, scales, `*`)
