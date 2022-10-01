@@ -16,11 +16,11 @@
 #'   it so that its sample mean and covariance matrix match those of the
 #'   Anscombe quartet.
 #'
-#'   The rotation is based on the square root of the sample correlation
-#'   matrix. If `idempotent = FALSE` then this square root is based
-#'   on the Cholesky decomposition this matrix, using [`chol`]. If
-#'   `idempotent = TRUE` the square root is based on the spectral decomposition
-#'   of this matrix, using [`eigen`]. This is a minimal rotation square root,
+#'   The rotation is based on the square root of the sample correlation matrix.
+#'   If `idempotent = FALSE` then this square root is based on the Cholesky
+#'   decomposition this matrix, using [`chol`]. If `idempotent = TRUE` the
+#'   square root is based on the spectral decomposition of this matrix, using
+#'   the output from [`eigen`]. This is a minimal rotation square root,
 #'   which means that if the input data already have the required summary
 #'   statistics then the dataset is returned unchanged.
 #' @return An object of class `c("anscombe", class(x))`. A dataset with the

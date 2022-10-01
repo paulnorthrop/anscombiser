@@ -43,11 +43,11 @@ The input dataset \code{x} is modified by shifting, scaling and rotating
 it so that its sample mean and covariance matrix match those of the
 Anscombe quartet.
 
-The rotation is based on the square root of the sample correlation
-matrix. If \code{idempotent = FALSE} then this square root is based
-on the Cholesky decomposition this matrix, using \code{\link{chol}}. If
-\code{idempotent = TRUE} the square root is based on the spectral decomposition
-of this matrix, using \code{\link{eigen}}. This is a minimal rotation square root,
+The rotation is based on the square root of the sample correlation matrix.
+If \code{idempotent = FALSE} then this square root is based on the Cholesky
+decomposition this matrix, using \code{\link{chol}}. If \code{idempotent = TRUE} the
+square root is based on the spectral decomposition of this matrix, using
+the output from \code{\link{eigen}}. This is a minimal rotation square root,
 which means that if the input data already have the required summary
 statistics then the dataset is returned unchanged.
 }
