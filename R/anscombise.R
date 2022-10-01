@@ -6,12 +6,12 @@
 #' @param x A numeric matrix or data frame.  Each column contains observations
 #'   on a different variable.  Missing observations are not allowed.
 #' @param which An integer in \{1, 2, 3, 4\}.  Which of Anscombe's dataset to
-#'   use.  Obviously, this makes very little difference.
+#'   use as the target dataset.  Obviously, this makes very little difference.
 #' @param idempotent A logical scalar. If `idempotent = TRUE` then applying
 #'  `anscombise` to one of the datsets in Anscombe's Quartet will return
-#'  the dataset unchanged. If `idempotent = FALSE` then the returned dataset
-#'  will be a rotated version of the original dataset, with the same summary
-#'  statistics. See **Details**.
+#'  the dataset unchanged, apart from a change of [`class`]. If
+#'  `idempotent = FALSE` then the returned dataset will be a rotated version
+#'  of the original dataset, with the same summary statistics. See **Details**.
 #' @details The input dataset `x` is modified by shifting, scaling and rotating
 #'   it so that its sample mean and covariance matrix match those of the
 #'   Anscombe quartet.
@@ -21,8 +21,9 @@
 #'   decomposition this matrix, using [`chol`]. If `idempotent = TRUE` the
 #'   square root is based on the spectral decomposition of this matrix, using
 #'   the output from [`eigen`]. This is a minimal rotation square root,
-#'   which means that if the input data already have the required summary
-#'   statistics then the dataset is returned unchanged.
+#'   which means that if the input data `x` already have the
+#'   exactly/approximately the required summary statistics then the returned
+#'   dataset is exactly/approximately the same as the target dataset.
 #' @return An object of class `c("anscombe", "matrix", "array")` with
 #'   [plot][plot.anscombe] and [print][print.anscombe] methods. This returned
 #'   dataset has the following summary statistics in common with Anscombe's

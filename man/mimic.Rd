@@ -17,11 +17,9 @@ supplied via \code{...}.  This can be used to set target summary statistics
 \item{...}{Additional arguments to be passed to \code{\link{set_stats}}.}
 
 \item{idempotent}{A logical scalar. If \code{idempotent = TRUE} then
-\code{mimic(x, x)} returns \code{x}, that is,
-to one of the datsets in Anscombe's Quartet will return
-the dataset unchanged. If \code{idempotent = FALSE} then the returned dataset
-may be a rotated version of the original dataset, with the same summary
-statistics. See \strong{Details}.}
+\code{mimic(x, x)} returns \code{x}, apart from a change of \code{\link{class}}. If
+\code{idempotent = FALSE} then the returned dataset may be a rotated version of
+the original dataset, with the same summary statistics. See \strong{Details}.}
 }
 \value{
 An object of class \code{c("anscombe", "matrix", "array")} with
@@ -41,19 +39,21 @@ If \code{x2} is supplied then it is returned as a attribute \code{old_data}.
 }
 \description{
 Modifies a dataset \code{x} so that it shares sample summary statistics with
-another dataset \code{x2}.
+a target dataset \code{x2}.
 }
 \details{
 The input dataset \code{x} is modified by shifting, scaling and rotating
-it so that its sample mean and covariance matrix match those of \code{x2}.
+it so that its sample mean and covariance matrix match those of the target
+dataset \code{x2}.
 
 The rotation is based on the square root of the sample correlation matrix.
 If \code{idempotent = FALSE} then this square root is based on the Cholesky
 decomposition this matrix, using \code{\link{chol}}. If \code{idempotent = TRUE} the
 square root is based on the spectral decomposition of this matrix, using
 the output from \code{\link{eigen}}. This is a minimal rotation square root,
-which means that if the input data already have the required summary
-statistics then the dataset is returned unchanged.
+which means that if the input data \code{x} already have the
+exactly/approximately the required summary statistics then the returned
+dataset is exactly/approximately the same as the target dataset \code{x2}.
 }
 \examples{
 ### 2D examples
