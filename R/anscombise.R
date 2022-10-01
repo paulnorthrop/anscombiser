@@ -23,14 +23,16 @@
 #'   the output from [`eigen`]. This is a minimal rotation square root,
 #'   which means that if the input data already have the required summary
 #'   statistics then the dataset is returned unchanged.
-#' @return An object of class `c("anscombe", class(x))`. A dataset with the
-#'   same format as `x`.  The returned dataset has the following summary
-#'   statistics in common with Anscombe's quartet.
+#' @return An object of class `c("anscombe", "matrix", "array")` with
+#'   [plot][plot.anscombe] and [print][print.anscombe] methods. This returned
+#'   dataset has the following summary statistics in common with Anscombe's
+#'   quartet.
 #'   * The sample means of each variable.
 #'   * The sample variances of each variable.
 #'   * The sample correlation matrix.
 #'   * The estimated regression coefficients from least squares linear
 #'     regressions of each variable on each other variable.
+#'
 #'   The target and new summary statistics are returned as attributes
 #'   `old_stats` and `new_stats` and the chosen Anscombe's quartet dataset as
 #'   an attribute `old_data`.

@@ -20,19 +20,21 @@ will be a rotated version of the original dataset, with the same summary
 statistics. See \strong{Details}.}
 }
 \value{
-An object of class \code{c("anscombe", class(x))}. A dataset with the
-same format as \code{x}.  The returned dataset has the following summary
-statistics in common with Anscombe's quartet.
+An object of class \code{c("anscombe", "matrix", "array")} with
+\link[=plot.anscombe]{plot} and \link[=print.anscombe]{print} methods. This returned
+dataset has the following summary statistics in common with Anscombe's
+quartet.
 \itemize{
 \item The sample means of each variable.
 \item The sample variances of each variable.
 \item The sample correlation matrix.
 \item The estimated regression coefficients from least squares linear
 regressions of each variable on each other variable.
+}
+
 The target and new summary statistics are returned as attributes
 \code{old_stats} and \code{new_stats} and the chosen Anscombe's quartet dataset as
 an attribute \code{old_data}.
-}
 }
 \description{
 Modifies a dataset \code{x} so that it shares sample summary statistics with
