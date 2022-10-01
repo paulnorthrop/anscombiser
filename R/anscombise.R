@@ -23,7 +23,7 @@
 #'   an attribute `old_data`.
 #' @seealso [`mimic`] to modify a dataset to share sample summary statistics
 #'   with another dataset.
-#' @seealso [`datasets::anscombe`] for Anscombe's Quartet.
+#' @seealso [`anscombe`][`datasets::anscombe`] for Anscombe's Quartet.
 #' @examples
 #' # Old faithful to new faithful
 #' new_faithful <- anscombise(datasets::faithful, which = 4)
