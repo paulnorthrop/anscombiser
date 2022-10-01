@@ -26,10 +26,11 @@
 #'   \url{https://doi.org/10.1080/00031305.1973.10478966}.
 #' @seealso [`anscombise`] and [`mimic`]
 #' @importFrom graphics plot
-#' @docType package
-#' @name anscombiser
 #' @md
-NULL
+#' @docType package
+#' @aliases anscombiser-package
+#' @aliases anscombiser
+"_PACKAGE"
 
 #' Donald Trump
 #'
