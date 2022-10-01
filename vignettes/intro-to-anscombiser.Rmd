@@ -34,12 +34,21 @@ library(anscombiser)
 
 ### Anscombe's quartet
 
-The `anscombise()` function takes an input two-dimensional dataset and outputs a dataset that shares Anscombe's statistics with his quartet of datasets.  The `which` argument chooses which of Anscombe's datasets to use.  Of course, this affects the output dataset only minimally but it matters if we want to plot the input dataset, as we do below.
+The `anscombise()` function takes an input two-dimensional dataset and outputs a dataset that shares Anscombe's statistics with his quartet of datasets.  The `which` argument chooses which of Anscombe's datasets to use.  The default is `which = 1`. Of course, this affects the output dataset only minimally but it matters if we want to plot the input dataset, as we do in an example below.
 
 ```{r par, echo = FALSE}
 opar <- graphics::par(no.readonly = TRUE)
 graphics::par(mar = c(4, 4, 1, 1))
 ```
+
+The `anscombiser` packages provides 8 input files: `input1` to `input8` that can be used to create Anscombe-like, with the same sample size of 11 as the original Anscombe quartet.  The following example uses input data arranged on the edge of a circle.
+
+```{r}
+a2 <- anscombise(input2, which = 4)
+plot(a2)
+```
+
+Now we transform the Old Faithful Geyser data so that it shares the sample summary statistics of the Anscombe quartet.
 
 ```{r anscombe}
 new_faithful <- anscombise(datasets::faithful, which = 4)
