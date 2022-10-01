@@ -1,37 +1,8 @@
-#' Anscombe's Quartet Separated
-#'
-#' Provides Anscombe's Quartet as separate data frames.
-#'
-#' @source Anscombe's Quartet of 'Identical' Simple Linear Regressions:
-#'   [`datasets::anscombe`] in the [`datasets`][`datasets::datasets-package`]
-#'   package.
-#' @name anscombe
-#' @md
-NULL
+# Anscombe's Quartet Separated are documented manually in man/anscombe.Rd
 
-#' @format `anscombe1`: an object of class `data.frame` with 11 rows and 2
-#'   columns (columns 1 and 5 of [`datasets::anscombe`]).
-#' @rdname anscombe
-#' @md
-"anscombe1"
+# Input datasets for use by anscombise() are manually in man/input_datasets.Rd
 
-#' @format `anscombe2`: an object of class `data.frame` with 11 rows and 2
-#'   columns (columns 2 and 6 of [`datasets::anscombe`]).
-#' @rdname anscombe
-#' @md
-"anscombe2"
-
-#' @format `anscombe3`: an object of class `data.frame` with 11 rows and 2
-#'   columns (columns 3 and 7 of [`datasets::anscombe`]).
-#' @rdname anscombe
-#' @md
-"anscombe3"
-
-#' @format `anscombe4`: an object of class `data.frame` with 11 rows and 2
-#'   columns (columns 4 and 8 of [`datasets::anscombe`]).
-#' @rdname anscombe
-#' @md
-"anscombe4"
+# -------------------------------- trump ------------------------------------ #
 
 #' Donald Trump
 #'
