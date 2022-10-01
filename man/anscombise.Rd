@@ -73,5 +73,6 @@ if (got_maps) {
 \code{\link{mimic}} to modify a dataset to share sample summary statistics
 with another dataset.
 
-\code{\link[datasets:anscombe]{anscombe}} for Anscombe's Quartet.
+\code{\link[datasets:anscombe]{datasets::anscombe}} for Anscombe's Quartet and \code{\link{anscombe}} for
+Anscombe's Quartet as 4 separate datasets.
 }

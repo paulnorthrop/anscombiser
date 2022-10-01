@@ -39,7 +39,8 @@
 #'   an attribute `old_data`.
 #' @seealso [`mimic`] to modify a dataset to share sample summary statistics
 #'   with another dataset.
-#' @seealso [`anscombe`][`datasets::anscombe`] for Anscombe's Quartet.
+#' @seealso [`datasets::anscombe`] for Anscombe's Quartet and [`anscombe`] for
+#'   Anscombe's Quartet as 4 separate datasets.
 #' @examples
 #' # Old faithful to new faithful
 #' new_faithful <- anscombise(datasets::faithful, which = 4)
@@ -66,7 +67,8 @@ anscombise <- function(x, which = 1, idempotent = TRUE) {
   if (!is_wholenumber(which) || which < 1 || which > 4) {
     stop("which must be an integer in {1, 2, 3, 4}")
   }
-  anscombe_data <- datasets::anscombe[, c(which, which + 4)]
+  anscombe_data <- switch(which, "1" = anscombe1, "2" = anscombe2,
+                          "3" = anscombe3, "4" = anscombe4)
   anscombe_stats <- get_stats(anscombe_data)
   new_x <- make_stats(x, anscombe_stats, idempotent = idempotent)
   # Calculate the summary statistics directly as a check
