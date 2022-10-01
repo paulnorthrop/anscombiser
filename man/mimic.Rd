@@ -11,7 +11,8 @@ mimic(x, x2, ...)
 on a different variable.  Missing observations are not allowed.
 \code{\link{get_stats}}\code{(x2)} sets the target summary statistics. If \code{x2} is missing
 then \code{\link{set_stats}} is called with \code{d = ncol(x)} and any additional arguments
-supplied via \code{...}.}
+supplied via \code{...}.  This can be used to set target summary statistics
+(means, variances and/or correlations).}
 
 \item{...}{Additional arguments to be passed to \code{\link{set_stats}}.}
 }

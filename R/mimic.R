@@ -7,7 +7,8 @@
 #'   on a different variable.  Missing observations are not allowed.
 #'   [`get_stats`]`(x2)` sets the target summary statistics. If `x2` is missing
 #'   then [`set_stats`] is called with `d = ncol(x)` and any additional arguments
-#'   supplied via `...`.
+#'   supplied via `...`.  This can be used to set target summary statistics
+#'   (means, variances and/or correlations).
 #' @param ... Additional arguments to be passed to [`set_stats`].
 #' @details The input dataset `x` is modified by shifting, scaling and rotating
 #'   it so that its sample mean and covariance matrix match those of `x2`.
