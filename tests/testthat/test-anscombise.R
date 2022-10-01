@@ -50,7 +50,8 @@ for (i in 1:4) {
   })
   the_text <- paste("Anscombe", which_dataset,
                     ": input = output when idempotent = TRUE")
-  test_that("the_text", {
+  # Use as.matrix to deal with the differences in class
+    test_that("the_text", {
     testthat::expect_equal(as.matrix(a_data), as.matrix(new_anscombe),
                            ignore_attr = TRUE)
   })
