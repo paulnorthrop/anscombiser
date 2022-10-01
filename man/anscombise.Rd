@@ -55,6 +55,25 @@ exactly/approximately the required summary statistics then the returned
 dataset is exactly/approximately the same as the target dataset.
 }
 \examples{
+# Produce Anscombe-like datasets using `input1` to `input8`.
+
+a1 <- anscombise(input1, idempotent = FALSE)
+plot(a1)
+a2 <- anscombise(input2)
+plot(a2)
+a3 <- anscombise(input3, idempotent = FALSE)
+plot(a3)
+a4 <- anscombise(input4, idempotent = FALSE)
+plot(a4)
+a5 <- anscombise(input5, idempotent = FALSE)
+plot(a5)
+a6 <- anscombise(input6)
+plot(a6)
+a7 <- anscombise(input7, idempotent = FALSE)
+plot(a7)
+a8 <- anscombise(input8, idempotent = FALSE)
+plot(a8)
+
 # Old faithful to new faithful
 new_faithful <- anscombise(datasets::faithful, which = 4)
 plot(new_faithful)
@@ -75,4 +94,7 @@ with another dataset.
 
 \code{\link[datasets:anscombe]{datasets::anscombe}} for Anscombe's Quartet and \code{\link{anscombe}} for
 Anscombe's Quartet as 4 separate datasets.
+
+\code{\link{input_datasets}} (\code{input1} to \code{input8} for some input datasest
+of the same size as those in Anscombe's quartet.
 }
