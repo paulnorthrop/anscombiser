@@ -82,7 +82,7 @@
 #' get_stats(datasets::trees)
 #' @export
 #' @md
-mimic <- function(x, x2, ...) {
+mimic <- function(x, x2, idempotent = TRUE, ...) {
   if (missing(x2)) {
     x2_stats <- set_stats(d = ncol(x), ...)
     old_data <- NA
@@ -102,7 +102,7 @@ mimic <- function(x, x2, ...) {
   if (anyNA(x)) {
     stop("x must not contain any missing values")
   }
-  new_x <- make_stats(x, x2_stats)
+  new_x <- make_stats(x, x2_stats, idempotent = idempotent)
   # Calculate the summary statistics directly as a check
   new_stats <- get_stats(new_x)
   # Save the target and new statistics as attributes, for testing and plotting
