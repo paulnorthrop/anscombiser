@@ -102,7 +102,7 @@
 <div class="section level3">
 <h3 id="an-example">An example<a class="anchor" aria-label="anchor" href="#an-example"></a>
 </h3>
-<p>The <code><a href="reference/mimic.html">mimic()</a></code> function transforms an input dataset (<code>dino</code> below) so that it has the same values of Anscombe’s summary statistics as another dataset (<code>trump</code> below).</p>
+<p>The <code><a href="reference/mimic.html">mimic()</a></code> function transforms an input dataset (<code>dino</code> below left) so that it has the same values of Anscombe’s summary statistics as another dataset (<code>trump</code> below right).</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://paulnorthrop.github.io/anscombiser/" class="external-link">anscombiser</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jumpingrivers/datasauRus" class="external-link">datasauRus</a></span><span class="op">)</span></span>
@@ -112,6 +112,7 @@
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">new_dino</span>, input <span class="op">=</span> <span class="cn">TRUE</span>, legend_args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"bottomright"</span><span class="op">)</span>, pch <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-trump-1.png" width="50%"><img src="reference/figures/README-trump-2.png" width="50%"></p>
 <p>In this example these images had similar summary statistics from the outset and therefore the appearance of the <code>dino</code> dataset has changed little. Otherwise, the first dataset will be deformed but its general shape will still be recognisable.</p>
+<p>The rotation applied to the input dataset is not unique. The function <code>mimic</code> (and a function <code>anscombise</code> that is specific to Anscombe’s quartet) has an argument <code>idempotent</code> that controls how the rotation is performed. In the special case where the input dataset already has the desired summary statistics, using <code>idempotent = TRUE</code> ensures that the output dataset is the same as the input dataset.</p>
 </div>
 <div class="section level3">
 <h3 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>

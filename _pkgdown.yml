@@ -23,6 +23,7 @@ reference:
     desc: ~
     contents:
       - "anscombe"
+      - "input_datasets"
       - "mapdata"
       - "trump"
   - title: Generics

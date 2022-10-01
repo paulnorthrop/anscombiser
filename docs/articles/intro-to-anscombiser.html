@@ -141,20 +141,31 @@ this method works in more than two dimensions.</p>
 <p>The <code><a href="../reference/anscombise.html">anscombise()</a></code> function takes an input two-dimensional
 dataset and outputs a dataset that shares Anscombe’s statistics with his
 quartet of datasets. The <code>which</code> argument chooses which of
-Anscombe’s datasets to use. Of course, this affects the output dataset
-only minimally but it matters if we want to plot the input dataset, as
-we do below.</p>
+Anscombe’s datasets to use. The default is <code>which = 1</code>. Of
+course, this affects the output dataset only minimally but it matters if
+we want to plot the input dataset, as we do in an example below.</p>
+<p>The <code>anscombiser</code> packages provides 8 input files:
+<code>input1</code> to <code>input8</code> that can be used to create
+Anscombe-like, with the same sample size of 11 as the original Anscombe
+quartet. The following example uses input data arranged on the edge of a
+circle.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">a2</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/anscombise.html">anscombise</a></span><span class="op">(</span><span class="va">input2</span>, which <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">a2</span><span class="op">)</span></span></code></pre></div>
+<p><img src="intro-to-anscombiser_files/figure-html/unnamed-chunk-2-1.png" width="80%" style="display: block; margin: auto;"></p>
+<p>Now we transform the Old Faithful Geyser data so that it shares the
+sample summary statistics of the Anscombe quartet.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">new_faithful</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/anscombise.html">anscombise</a></span><span class="op">(</span><span class="fu">datasets</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/datasets/faithful.html" class="external-link">faithful</a></span>, which <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">new_faithful</span><span class="op">)</span></span></code></pre></div>
 <p><img src="intro-to-anscombiser_files/figure-html/anscombe-1.png" width="80%" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">new_faithful</span>, input <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><img src="intro-to-anscombiser_files/figure-html/anscombe-2.png" width="80%" style="display: block; margin: auto;"></p>
 <p>If we view a plot of the outline of the coast of Italy from a strange
 angle then the resulting dataset has the same sample summary statistics
 as those above.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">italy</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mapdata.html">mapdata</a></span><span class="op">(</span><span class="st">"Italy"</span><span class="op">)</span></span>
 <span><span class="va">new_italy</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/anscombise.html">anscombise</a></span><span class="op">(</span><span class="va">italy</span>, which <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">new_italy</span><span class="op">)</span></span></code></pre></div>
@@ -171,7 +182,7 @@ statistics. A particularly effective feature of the
 dinosaur. Here, we show that a plot of the outline of the coast of the
 UK needs little adjustment to replicate the sample summary statistics of
 the dinosaur dataset.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jumpingrivers/datasauRus" class="external-link">datasauRus</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">maps</span><span class="op">)</span></span>
 <span><span class="va">dino</span> <span class="op">&lt;-</span> <span class="va">datasaurus_dozen_wide</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dino_x"</span>, <span class="st">"dino_y"</span><span class="op">)</span><span class="op">]</span></span>
@@ -179,16 +190,16 @@ the dinosaur dataset.</p>
 <span><span class="va">new_UK</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mimic.html">mimic</a></span><span class="op">(</span><span class="va">UK</span>, <span class="va">dino</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">new_UK</span>, legend_args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"right"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="intro-to-anscombiser_files/figure-html/dino-1.png" width="80%" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">new_UK</span>, input <span class="op">=</span> <span class="cn">TRUE</span>, legend_args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"topright"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="intro-to-anscombiser_files/figure-html/dino-2.png" width="80%" style="display: block; margin: auto;"></p>
 <p>We finish this section with another example involving the
 dinosaur.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">new_dino</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mimic.html">mimic</a></span><span class="op">(</span><span class="va">dino</span>, <span class="va">trump</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">new_dino</span>, legend_args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"topright"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="intro-to-anscombiser_files/figure-html/trump-1.png" width="80%" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">new_dino</span>, input <span class="op">=</span> <span class="cn">TRUE</span>, legend_args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"bottomright"</span><span class="op">)</span>, pch <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span></code></pre></div>
 <p><img src="intro-to-anscombiser_files/figure-html/trump-2.png" width="80%" style="display: block; margin: auto;"></p>
 <p>The final image was created by <a href="https://thenounproject.com/term/donald-trump/727774/" class="external-link">Accentaur
@@ -199,7 +210,7 @@ from the Noun Project</a>.</p>
 </h3>
 <p>We conclude with a brief 3D example, using the <code>randu</code> and
 <code>trees</code> datasets in the <code>datasets</code> package.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">new_randu</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mimic.html">mimic</a></span><span class="op">(</span><span class="fu">datasets</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/datasets/randu.html" class="external-link">randu</a></span>, <span class="fu">datasets</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/r/datasets/trees.html" class="external-link">trees</a></span><span class="op">)</span></span>
 <span><span class="co"># new_randu and trees share the same sample summary statistics</span></span>
 <span><span class="va">new_randu_stats</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_stats.html">get_stats</a></span><span class="op">(</span><span class="va">new_randu</span><span class="op">)</span></span>
@@ -217,7 +228,7 @@ from the Noun Project</a>.</p>
 <span><span class="co">#&gt; new3 0.9671194 0.5982497 1.0000000</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/pairs.html" class="external-link">pairs</a></span><span class="op">(</span><span class="va">trees</span><span class="op">)</span></span></code></pre></div>
 <p><img src="intro-to-anscombiser_files/figure-html/3D-1.png" width="80%" style="display: block; margin: auto;"></p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/pairs.html" class="external-link">pairs</a></span><span class="op">(</span><span class="va">new_randu</span><span class="op">)</span></span></code></pre></div>
 <p><img src="intro-to-anscombiser_files/figure-html/3D-2.png" width="80%" style="display: block; margin: auto;"></p>
 <p>It is well-known that in three-dimensional displays of the
@@ -226,7 +237,8 @@ evident in these pairwise displays.</p>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-anscombe" class="csl-entry">
 Anscombe, F. J. 1973. <span>“Graphs in Statistical Analysis.”</span>
-<em>The American Statistician</em> 27 (1): 17–21. <a href="https://doi.org/10.1080/00031305.1973.10478966" class="external-link">https://doi.org/10.1080/00031305.1973.10478966</a>.
+<em>The American Statistician</em> 27 (1). Taylor &amp; Francis: 17–21.
+doi:<a href="https://doi.org/10.1080/00031305.1973.10478966" class="external-link">10.1080/00031305.1973.10478966</a>.
 </div>
 <div id="ref-datasauRus" class="csl-entry">
 Locke, Steph, and Lucy D’Agostino McGowan. 2018. <em>datasauRus:
@@ -235,7 +247,8 @@ Datasets from the Datasaurus Dozen</em>. <a href="https://CRAN.R-project.org/pac
 <div id="ref-dpaper" class="csl-entry">
 Matejka, Justin, and George Fitzmaurice. 2017. <span>“Same Stats,
 Different Graphs: Generating Datasets with Varied Appearance and
-Identical Statistics Through Simulated Annealing.”</span> <a href="https://www.autodesk.com/research/publications/same-stats-different-graphs" class="external-link">https://www.autodesk.com/research/publications/same-stats-different-graphs</a>.
+Identical Statistics Through Simulated Annealing.”</span> Autodesk
+Research, Toronto, Ontario, Canada. <a href="https://www.autodesk.com/research/publications/same-stats-different-graphs" class="external-link">https://www.autodesk.com/research/publications/same-stats-different-graphs</a>.
 </div>
 </div>
 </div>
