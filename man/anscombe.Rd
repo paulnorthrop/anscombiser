@@ -10,21 +10,21 @@
 \title{Anscombe's Quartet Separated}
 \format{
 \code{anscombe1}: an object of class \code{data.frame} with 11 rows and 2
-columns (columns 1 and 5 of \code{\link[datasets:anscombe]{anscombe}}).
+columns (columns 1 and 5 of \code{\link[datasets:anscombe]{datasets::anscombe}}).
 
 \code{anscombe2}: an object of class \code{data.frame} with 11 rows and 2
-columns (columns 2 and 6 of \code{\link[datasets:anscombe]{anscombe}}).
+columns (columns 2 and 6 of \code{\link[datasets:anscombe]{datasets::anscombe}}).
 
 \code{anscombe3}: an object of class \code{data.frame} with 11 rows and 2
-columns (columns 3 and 7 of \code{\link[datasets:anscombe]{anscombe}}).
+columns (columns 3 and 7 of \code{\link[datasets:anscombe]{datasets::anscombe}}).
 
 \code{anscombe4}: an object of class \code{data.frame} with 11 rows and 2
-columns (columns 4 and 8 of \code{\link[datasets:anscombe]{anscombe}}).
+columns (columns 4 and 8 of \code{\link[datasets:anscombe]{datasets::anscombe}}).
 }
 \source{
 Anscombe's Quartet of 'Identical' Simple Linear Regressions:
-\code{\link[datasets:anscombe]{anscombe}} in the
-\code{\link[datasets:datasets-package]{datasets}} package
+\code{\link[datasets:anscombe]{datasets::anscombe}} in the \code{\link[datasets:datasets-package]{datasets}}
+package.
 }
 \usage{
 anscombe1
