@@ -5,6 +5,7 @@
 
 [![AppVeyor Build
 Status](https://ci.appveyor.com/api/projects/status/github/paulnorthrop/anscombiser?branch=main&svg=true)](https://ci.appveyor.com/project/paulnorthrop/anscombiser)
+[![R-CMD-check](https://github.com/paulnorthrop/anscombiser/workflows/R-CMD-check/badge.svg)](https://github.com/paulnorthrop/anscombiser/actions)
 [![Coverage
 Status](https://codecov.io/github/paulnorthrop/anscombiser/coverage.svg?branch=main)](https://codecov.io/github/paulnorthrop/anscombiser?branch=master)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/anscombiser)](https://cran.r-project.org/package=anscombiser)
