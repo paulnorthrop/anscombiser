@@ -19,10 +19,16 @@
     <loc>/news/index.html</loc>
   </url>
   <url>
+    <loc>/reference/anscombe.html</loc>
+  </url>
+  <url>
     <loc>/reference/anscombise.html</loc>
   </url>
   <url>
     <loc>/reference/anscombiser-internal.html</loc>
+  </url>
+  <url>
+    <loc>/reference/anscombiser-package.html</loc>
   </url>
   <url>
     <loc>/reference/anscombiser.html</loc>

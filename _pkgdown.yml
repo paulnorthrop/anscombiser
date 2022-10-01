@@ -22,6 +22,7 @@ reference:
   - title: Example data
     desc: ~
     contents:
+      - "anscombe"
       - "mapdata"
       - "trump"
   - title: Generics

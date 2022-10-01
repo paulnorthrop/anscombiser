@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">anscombiser</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">1.0.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">1.1.0</span>
       </span>
     </div>
 
@@ -63,8 +63,8 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="co"># S3 method for anscombe</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>, input <span class="op">=</span> <span class="cn">FALSE</span>, stats <span class="op">=</span> <span class="cn">TRUE</span>, digits <span class="op">=</span> <span class="fl">3</span>, legend_args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S3 method for anscombe</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>, input <span class="op">=</span> <span class="cn">FALSE</span>, stats <span class="op">=</span> <span class="cn">TRUE</span>, digits <span class="op">=</span> <span class="fl">3</span>, legend_args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -72,27 +72,40 @@
     <dl><dt>x</dt>
 <dd><p>an object of class <code>'anscombe'</code>, a result of a call to
 <code><a href="anscombise.html">anscombise</a></code> or <code><a href="mimic.html">mimic</a></code>.</p></dd>
+
+
 <dt>input</dt>
 <dd><p>A logical scalar.  Should the old, input data, that is, the
 Anscombe's dataset chosen for <code><a href="anscombise.html">anscombise</a></code> or the argument <code>x2</code> to
 <code><a href="mimic.html">mimic</a></code>, be plotted?  If <code>old = FALSE</code> then the new, output data are
 plotted. If <code>old = TRUE</code> then the old data are plotted.</p></dd>
+
+
 <dt>stats</dt>
 <dd><p>A logical scalar.  Should the sample summary statistics
 <code>n</code>, <code>means</code>, <code>variances</code> and <code>correlation</code> be added to the plot?</p></dd>
+
+
 <dt>digits</dt>
 <dd><p>An integer.  The argument <code>digits</code> passed to <code><a href="https://rdrr.io/r/base/Round.html" class="external-link">signif</a></code>
 to round the values of the statistics before adding them to the plot.</p></dd>
+
+
 <dt>legend_args</dt>
 <dd><p>A list of arguments to be passed to
 <code><a href="https://rdrr.io/r/graphics/legend.html" class="external-link">legend</a></code> when <code>stats = TRUE</code>, especially
 <code>legend_args$x</code> to control the position of the legend.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Further arguments to be passed to <code><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></code></p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>Nothing is returned.</p>
+    
+
+<p>Nothing is returned.</p>
     </div>
     <div id="details">
     <h2>Details</h2>
@@ -122,7 +135,7 @@ when <code>length(attr(x, "new_stats")$means)</code> = 2.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

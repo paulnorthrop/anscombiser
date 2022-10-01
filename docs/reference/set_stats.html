@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">anscombiser</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">1.0.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">1.1.0</span>
       </span>
     </div>
 
@@ -63,24 +63,33 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">set_stats</span><span class="op">(</span>d <span class="op">=</span> <span class="fl">2</span>, means <span class="op">=</span> <span class="fl">0</span>, variances <span class="op">=</span> <span class="fl">1</span>, correlation <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/diag.html" class="external-link">diag</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">set_stats</span><span class="op">(</span>d <span class="op">=</span> <span class="fl">2</span>, means <span class="op">=</span> <span class="fl">0</span>, variances <span class="op">=</span> <span class="fl">1</span>, correlation <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/diag.html" class="external-link">diag</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>d</dt>
 <dd><p>An integer that is no smaller than 2.</p></dd>
+
+
 <dt>means</dt>
 <dd><p>A numeric vector of sample means.</p></dd>
+
+
 <dt>variances</dt>
 <dd><p>A numeric vector of positive sample variances.</p></dd>
+
+
 <dt>correlation</dt>
 <dd><p>A numeric correlation matrix.  None of the off-diagonal
 entries in <code>correlation</code> are allowed to be equal to 1 in absolute value.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A list containing the following components.</p><ul><li><p><code>means</code> a <code>d</code>-vector of sample means.</p></li>
+    
+
+<p>A list containing the following components.</p><ul><li><p><code>means</code> a <code>d</code>-vector of sample means.</p></li>
 <li><p><code>variances</code> a <code>d</code>-vector sample variances.</p></li>
 <li><p><code>correlation</code> a <code>d</code> by <code>d</code> correlation matrix.</p></li>
 </ul></div>
@@ -92,8 +101,8 @@ entries in <code>correlation</code> are allowed to be equal to 1 in absolute val
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># Uncorrelated with zero means and unit variances</span></span>
-<span class="r-in"><span class="fu">set_stats</span><span class="op">(</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Uncorrelated with zero means and unit variances</span></span></span>
+<span class="r-in"><span><span class="fu">set_stats</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $means</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -105,8 +114,8 @@ entries in <code>correlation</code> are allowed to be equal to 1 in absolute val
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1    0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    0    1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span class="co"># Sample correlation = 0.9</span></span>
-<span class="r-in"><span class="fu">set_stats</span><span class="op">(</span>correlation <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">0.9</span>, <span class="fl">0.9</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="co"># Sample correlation = 0.9</span></span></span>
+<span class="r-in"><span><span class="fu">set_stats</span><span class="op">(</span>correlation <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">0.9</span>, <span class="fl">0.9</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fl">2</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $means</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
@@ -132,7 +141,7 @@ entries in <code>correlation</code> are allowed to be equal to 1 in absolute val
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>
