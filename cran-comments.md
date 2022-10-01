@@ -2,7 +2,7 @@ This is a resubmission.
 
 I have reset par() at the end of the vignette because I changed par() earlier.
 
-There are no obvious references for the methods used in this package, because they are essentially trival shifting, scaling and rotating of data (the latter using Cholesky decomposition of the sample covariance matrix).  However, your suggestion has prompted me to include in the DESCRIPTION a citatio of the related datasauRus package.
+There are no obvious references for the methods used in this package, because they are essentially trival shifting, scaling and rotating of data (the latter using Cholesky decomposition of the sample covariance matrix).  However, your suggestion has prompted me to include in the DESCRIPTION a citation of the related datasauRus package.
 
 ## R CMD check results
 
