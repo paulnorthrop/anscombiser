@@ -34,7 +34,7 @@ an overview of the package.
 \references{
 Anscombe, F. J. (1973). Graphs in Statistical Analysis.
 The American Statistician 27 (1): 17–21.
-\url{https://doi.org/10.1080/00031305.1973.10478966}.
+\doi{10.1080/00031305.1973.10478966}
 }
 \seealso{
 \code{\link{anscombise}} and \code{\link{mimic}}
