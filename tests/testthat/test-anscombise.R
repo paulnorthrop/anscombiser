@@ -33,7 +33,7 @@ for (i in 1:4) {
   })
 }
 
-## Idempotent = TRUE (alos check that input = output)
+## Idempotent = TRUE (also check that input = output)
 
 for (i in 1:4) {
   which_dataset <- i
