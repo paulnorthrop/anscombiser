@@ -15,20 +15,29 @@ supplied via \code{...}.  This can be used to set target summary statistics
 (means, variances and/or correlations).}
 
 \item{...}{Additional arguments to be passed to \code{\link{set_stats}}.}
+
+\item{idempotent}{A logical scalar. If \code{idempotent = TRUE} then
+\code{mimic(x, x)} returns \code{x}, that is,
+to one of the datsets in Anscombe's Quartet will return
+the dataset unchanged. If \code{idempotent = FALSE} then the returned dataset
+may be a rotated version of the original dataset, with the same summary
+statistics. See \strong{Details}.}
 }
 \value{
-A dataset with the same format as \code{x}.  The returned dataset has the
-following summary statistics in common with \code{x2}.
+An object of class \code{c("anscombe", "matrix", "array")} with
+\link[=plot.anscombe]{plot} and \link[=print.anscombe]{print} methods. This returned
+dataset has the following summary statistics in common with \code{x2}.
 \itemize{
 \item The sample means of each variable.
 \item The sample variances of each variable.
 \item The sample correlation matrix.
 \item The estimated regression coefficients from least squares linear
 regressions of each variable on each other variable.
+}
+
 The target and new summary statistics are returned as attributes
 \code{old_stats} and \code{new_stats}.
 If \code{x2} is supplied then it is returned as a attribute \code{old_data}.
-}
 }
 \description{
 Modifies a dataset \code{x} so that it shares sample summary statistics with
@@ -37,6 +46,14 @@ another dataset \code{x2}.
 \details{
 The input dataset \code{x} is modified by shifting, scaling and rotating
 it so that its sample mean and covariance matrix match those of \code{x2}.
+
+The rotation is based on the square root of the sample correlation matrix.
+If \code{idempotent = FALSE} then this square root is based on the Cholesky
+decomposition this matrix, using \code{\link{chol}}. If \code{idempotent = TRUE} the
+square root is based on the spectral decomposition of this matrix, using
+the output from \code{\link{eigen}}. This is a minimal rotation square root,
+which means that if the input data already have the required summary
+statistics then the dataset is returned unchanged.
 }
 \examples{
 ### 2D examples

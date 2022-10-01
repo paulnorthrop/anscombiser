@@ -10,15 +10,31 @@
 #'   supplied via `...`.  This can be used to set target summary statistics
 #'   (means, variances and/or correlations).
 #' @param ... Additional arguments to be passed to [`set_stats`].
+#' @param idempotent A logical scalar. If `idempotent = TRUE` then
+#'  `mimic(x, x)` returns `x`, that is,
+#'  to one of the datsets in Anscombe's Quartet will return
+#'  the dataset unchanged. If `idempotent = FALSE` then the returned dataset
+#'  may be a rotated version of the original dataset, with the same summary
+#'  statistics. See **Details**.
 #' @details The input dataset `x` is modified by shifting, scaling and rotating
 #'   it so that its sample mean and covariance matrix match those of `x2`.
-#' @return A dataset with the same format as `x`.  The returned dataset has the
-#'  following summary statistics in common with `x2`.
+#'
+#'   The rotation is based on the square root of the sample correlation matrix.
+#'   If `idempotent = FALSE` then this square root is based on the Cholesky
+#'   decomposition this matrix, using [`chol`]. If `idempotent = TRUE` the
+#'   square root is based on the spectral decomposition of this matrix, using
+#'   the output from [`eigen`]. This is a minimal rotation square root,
+#'   which means that if the input data already have the required summary
+#'   statistics then the dataset is returned unchanged.
+#' @return An object of class `c("anscombe", "matrix", "array")` with
+#'   [plot][plot.anscombe] and [print][print.anscombe] methods. This returned
+#'   dataset has the following summary statistics in common with `x2`.
 #'   * The sample means of each variable.
 #'   * The sample variances of each variable.
 #'   * The sample correlation matrix.
 #'   * The estimated regression coefficients from least squares linear
 #'     regressions of each variable on each other variable.
+#'
 #'   The target and new summary statistics are returned as attributes
 #'   `old_stats` and `new_stats`.
 #'   If `x2` is supplied then it is returned as a attribute `old_data`.
