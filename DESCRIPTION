@@ -1,7 +1,7 @@
 Package: anscombiser
 Title: Create Datasets with Identical Summary Statistics
-Version: 1.0.0.9000
-Date: 2020-04-02
+Version: 1.1.0
+Date: 2020-10-01
 Authors@R: person(c("Paul", "J."), "Northrop", email = "p.northrop@ucl.ac.uk",
   role = c("aut", "cre", "cph"))
 Description: Anscombe's quartet are a set of four two-variable datasets that 
@@ -19,7 +19,6 @@ Description: Anscombe's quartet are a set of four two-variable datasets that
     of datasets that have markedly different scatter plots but share many 
     sample summary statistics.
 Imports: 
-    datasets,
     graphics,
     stats
 License: GPL (>= 2)
@@ -27,9 +26,10 @@ LazyData: TRUE
 Encoding: UTF-8
 Depends:
     R (>= 3.3.0)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 Suggests:
     datasauRus,
+    datasets,
     maps,
     testthat,
     knitr,
