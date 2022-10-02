@@ -7,7 +7,7 @@
 #'   `x` for [`anscombise`].
 #' @param which,idempotent Vectors that provide the arguments of the same names
 #'   to [`anscombise`] for each dataset.  If necessary, [`rep_len`] is used to
-#'   replicate these arguments so that the each have length `length(x)`.
+#'   replicate these arguments so that they each have length `length(x)`.
 #' @param theme_name A character scalar used to set the
 #'   [`ggtheme`][`ggplot2::theme_bw`].
 #'   One of `"grey"`, `"gray"`, `"bw"`, `"linedraw"`, `"light"`, `"dark"`,

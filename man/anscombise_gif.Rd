@@ -18,7 +18,7 @@ anscombise_gif(
 
 \item{which, idempotent}{Vectors that provide the arguments of the same names
 to \code{\link{anscombise}} for each dataset.  If necessary, \code{\link{rep_len}} is used to
-replicate these arguments so that the each have length \code{length(x)}.}
+replicate these arguments so that they each have length \code{length(x)}.}
 
 \item{theme_name}{A character scalar used to set the
 \code{\link[ggplot2:ggtheme]{ggtheme}}.
