@@ -95,6 +95,6 @@ with another dataset.
 \code{\link[datasets:anscombe]{datasets::anscombe}} for Anscombe's Quartet and \code{\link{anscombe}} for
 Anscombe's Quartet as 4 separate datasets.
 
-\code{\link{input_datasets}} (\code{input1} to \code{input8} for some input datasest
+\code{\link{input_datasets}}: \code{input1} to \code{input8} for some input datasest
 of the same size as those in Anscombe's quartet.
 }

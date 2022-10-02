@@ -41,7 +41,7 @@
 #'   with another dataset.
 #' @seealso [`datasets::anscombe`] for Anscombe's Quartet and [`anscombe`] for
 #'   Anscombe's Quartet as 4 separate datasets.
-#' @seealso [`input_datasets`] (`input1` to `input8` for some input datasest
+#' @seealso [`input_datasets`]: `input1` to `input8` for some input datasest
 #'   of the same size as those in Anscombe's quartet.
 #' @examples
 #' # Produce Anscombe-like datasets using `input1` to `input8`.
