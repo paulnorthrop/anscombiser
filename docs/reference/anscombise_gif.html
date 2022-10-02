@@ -70,7 +70,10 @@ with <a href="https://rdrr.io/r/datasets/anscombe.html" class="external-link">An
 <span>  which <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  idempotent <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  theme_name <span class="op">=</span> <span class="st">"classic"</span>,</span>
-<span>  ease <span class="op">=</span> <span class="st">"cubic-in-out"</span></span>
+<span>  ease <span class="op">=</span> <span class="st">"cubic-in-out"</span>,</span>
+<span>  transition_length <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>  state_length <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>  wrap <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -98,6 +101,11 @@ One of <code>"grey"</code>, <code>"gray"</code>, <code>"bw"</code>, <code>"lined
 <dd><p>A character scalar passed to <code><a href="https://gganimate.com/reference/ease_aes.html" class="external-link">ease_aes</a></code>
 to control how the points move in transitioning from one dataset to
 the next.</p></dd>
+
+
+<dt>transition_length, state_length, wrap</dt>
+<dd><p>Arguments passed to
+<code><a href="https://gganimate.com/reference/transition_states.html" class="external-link">transition_states</a></code>.</p></dd>
 
 </dl></div>
     <div id="value">
