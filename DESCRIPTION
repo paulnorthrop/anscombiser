@@ -30,6 +30,8 @@ RoxygenNote: 7.2.1
 Suggests:
     datasauRus,
     datasets,
+    gganimate,
+    ggplot2,
     maps,
     testthat,
     knitr,
