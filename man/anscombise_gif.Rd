@@ -9,7 +9,10 @@ anscombise_gif(
   which = 1,
   idempotent = TRUE,
   theme_name = "classic",
-  ease = "cubic-in-out"
+  ease = "cubic-in-out",
+  transition_length = 3,
+  state_length = 1,
+  wrap = TRUE
 )
 }
 \arguments{
@@ -28,6 +31,9 @@ One of \code{"grey"}, \code{"gray"}, \code{"bw"}, \code{"linedraw"}, \code{"ligh
 \item{ease}{A character scalar passed to \code{\link[gganimate:ease_aes]{ease_aes}}
 to control how the points move in transitioning from one dataset to
 the next.}
+
+\item{transition_length, state_length, wrap}{Arguments passed to
+\code{\link[gganimate:transition_states]{transition_states}}.}
 }
 \value{
 An object of class \code{c("gganim", "gg", "ggplot")} with an additional

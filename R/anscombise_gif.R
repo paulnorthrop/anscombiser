@@ -15,6 +15,8 @@
 #' @param ease A character scalar passed to [`ease_aes`][`gganimate::ease_aes`]
 #'   to control how the points move in transitioning from one dataset to
 #'   the next.
+#' @param transition_length,state_length,wrap Arguments passed to
+#'   [`transition_states`][`gganimate::transition_states`].
 #' @details For this function to work the packages
 #'   [`ggplot2`][`ggplot2::ggplot2-package`] and
 #'   [`gganimate`][`gganimate::gganimate-package`] must be installed.
@@ -38,7 +40,9 @@
 #' @export
 #' @md
 anscombise_gif <- function(x, which = 1, idempotent = TRUE,
-                           theme_name = "classic", ease = "cubic-in-out") {
+                           theme_name = "classic", ease = "cubic-in-out",
+                           transition_length = 3, state_length = 1,
+                           wrap = TRUE) {
   if (!requireNamespace("ggplot2", quietly = TRUE)) {
     stop("Package ''ggplot2'' is required. Please install it.")
   }
@@ -76,8 +80,10 @@ anscombise_gif <- function(x, which = 1, idempotent = TRUE,
   # Call ggplot2::ggplot to animate the plots
   animated_plots <- ggplot2::ggplot(res, ggplot2::aes(x = x, y = y)) +
     ggplot2::geom_point() +
-    gganimate::transition_states(dataset, 3, 1) +
-    gganimate::ease_aes(ease)
+    gganimate::transition_states(dataset,
+                                 transition_length = transition_length,
+                                 state_length = state_length,
+                                 wrap = wrap) + gganimate::ease_aes(ease)
   animated_plots <- animated_plots +
     switch(theme_name,
            grey = ggplot2::theme_grey(),
