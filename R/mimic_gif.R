@@ -68,6 +68,9 @@ mimic_gif <- function(x, x2, idempotent = TRUE, theme_name = "classic",
   res[, "dataset"] <- rep(names(x), times = sample_sizes)
   # Rename the first 2 columns
   names(res) <- c("x", "y", "dataset")
+  # Hack to avoid NOTE: no visible binding for global variable
+  dataset <- NULL
+  y <- NULL
   # Call ggplot2::ggplot to animate the plots
   animated_plots <- ggplot2::ggplot(res, ggplot2::aes(x = x, y = y)) +
     ggplot2::geom_point() +
