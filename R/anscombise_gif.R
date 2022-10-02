@@ -1,7 +1,7 @@
-#' Create an animation of several Anscombised datasets
+#' Animation of several Anscombised datasets
 #'
-#' Modifies a dataset `x` so that it shares sample summary statistics with
-#' [Anscombe's quartet][datasets::anscombe].
+#' Create an animation to show datasets that share sample summary statistics
+#' with [Anscombe's quartet][datasets::anscombe].
 #'
 #' @param x A list of input datasets.  Each one must be suitable argument
 #'   `x` for for [`anscombise`].
