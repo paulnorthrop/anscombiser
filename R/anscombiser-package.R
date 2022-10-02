@@ -19,7 +19,7 @@
 #'   * [`mimic`], which modified a user-supplied dataset so that is shares
 #'     sample summary statistics with another user-supplied dataset.
 #'
-#'   See \code{vignette("intro-to-anscombiser", package = "anscombiser")} for
+#'   See `vignette("intro-to-anscombiser", package = "anscombiser")` for
 #'   an overview of the package.
 #' @references Anscombe, F. J. (1973). Graphs in Statistical Analysis.
 #'   The American Statistician 27 (1): 17–21.
