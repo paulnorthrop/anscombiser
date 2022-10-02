@@ -11,3 +11,5 @@ Meta
 checks
 /doc/
 /Meta/
+create_data/*.gif
+create_data/gganimate.R
