@@ -70,6 +70,7 @@ anscombise_gif <- function(x, which = 1, idempotent = TRUE,
   res[, "dataset"] <- rep(names(x), times = sample_sizes)
   # Rename the first 2 columns
   names(res) <- c("x", "y", "dataset")
+  dataset <- NULL
   # Call ggplot2::ggplot to animate the plots
   animated_plots <- ggplot2::ggplot(res, ggplot2::aes(x = x, y = y)) +
     ggplot2::geom_point() +
