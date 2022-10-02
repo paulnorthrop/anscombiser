@@ -31,3 +31,8 @@ reference:
     contents:
       - "plot.anscombe"
       - "print.anscombe"
+  - title: Animations
+    desc: ~
+    contents:
+      - "anscombise_gif"
+      - "mimic_gif"

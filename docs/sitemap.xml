@@ -34,6 +34,9 @@
     <loc>/reference/anscombiser.html</loc>
   </url>
   <url>
+    <loc>/reference/anscombise_gif.html</loc>
+  </url>
+  <url>
     <loc>/reference/get_stats.html</loc>
   </url>
   <url>
@@ -47,6 +50,9 @@
   </url>
   <url>
     <loc>/reference/mimic.html</loc>
+  </url>
+  <url>
+    <loc>/reference/mimic_gif.html</loc>
   </url>
   <url>
     <loc>/reference/plot.anscombe.html</loc>
