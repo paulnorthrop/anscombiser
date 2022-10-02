@@ -10,7 +10,7 @@ anscombise(x, which = 1, idempotent = TRUE)
 \item{x}{A numeric matrix or data frame.  Each column contains observations
 on a different variable.  Missing observations are not allowed.}
 
-\item{which}{An integer in \{1, 2, 3, 4\}.  Which of Anscombe's dataset to
+\item{which}{An integer in \{1, 2, 3, 4\}.  Which of Anscombe's datasets to
 use as the target dataset.  Obviously, this makes very little difference.}
 
 \item{idempotent}{A logical scalar. If \code{idempotent = TRUE} then applying

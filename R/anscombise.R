@@ -5,7 +5,7 @@
 #'
 #' @param x A numeric matrix or data frame.  Each column contains observations
 #'   on a different variable.  Missing observations are not allowed.
-#' @param which An integer in \{1, 2, 3, 4\}.  Which of Anscombe's dataset to
+#' @param which An integer in \{1, 2, 3, 4\}.  Which of Anscombe's datasets to
 #'   use as the target dataset.  Obviously, this makes very little difference.
 #' @param idempotent A logical scalar. If `idempotent = TRUE` then applying
 #'  `anscombise` to one of the datsets in Anscombe's Quartet will return
