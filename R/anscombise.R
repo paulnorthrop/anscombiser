@@ -8,7 +8,7 @@
 #' @param which An integer in \{1, 2, 3, 4\}.  Which of Anscombe's datasets to
 #'   use as the target dataset.  Obviously, this makes very little difference.
 #' @param idempotent A logical scalar. If `idempotent = TRUE` then applying
-#'  `anscombise` to one of the datsets in Anscombe's Quartet will return
+#'  `anscombise` to one of the datasets in Anscombe's Quartet will return
 #'  the dataset unchanged, apart from a change of [`class`]. If
 #'  `idempotent = FALSE` then the returned dataset will be a rotated version
 #'  of the original dataset, with the same summary statistics. See **Details**.

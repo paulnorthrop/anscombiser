@@ -14,7 +14,7 @@ on a different variable.  Missing observations are not allowed.}
 use as the target dataset.  Obviously, this makes very little difference.}
 
 \item{idempotent}{A logical scalar. If \code{idempotent = TRUE} then applying
-\code{anscombise} to one of the datsets in Anscombe's Quartet will return
+\code{anscombise} to one of the datasets in Anscombe's Quartet will return
 the dataset unchanged, apart from a change of \code{\link{class}}. If
 \code{idempotent = FALSE} then the returned dataset will be a rotated version
 of the original dataset, with the same summary statistics. See \strong{Details}.}
