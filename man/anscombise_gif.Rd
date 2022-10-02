@@ -33,6 +33,11 @@ the next.}
 An object of class \code{c("gganim", "gg", "ggplot")} with an additional
 attribute \code{new_data} that is a data frame with 3 variables, \code{x}, \code{y} and
 \code{dataset} containing the datasets output from \code{anscombise}.
+
+The returned object may be displayed using by typing its name,
+e.g., \code{anim} or saved as a GIF file using
+\code{\link[gganimate:anim_save]{anim_save}}, e.g.,
+\code{gganimate::anim_save("anscombe.gif", anim)}.
 }
 \description{
 Modifies a dataset \code{x} so that it shares sample summary statistics with
@@ -42,11 +47,6 @@ Modifies a dataset \code{x} so that it shares sample summary statistics with
 For this function to work the packages
 \code{\link[ggplot2:ggplot2-package]{ggplot2}} and
 \code{\link[gganimate:gganimate-package]{gganimate}} must be installed.
-
-The returned object may be displayed using by typing its name,
-e.g. \code{anim} or saved as a GIF file using
-\code{\link[gganimate:anim_save]{anim_save}}, e.g.
-\code{anim_save("anscombe.gif", anim)}.
 }
 \examples{
 # Animate some Anscombe-like datasets produced using input1 to input8
@@ -55,7 +55,8 @@ idem <- c(FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE)
 anim <- anscombise_gif(x, idempotent = idem)
 }
 \seealso{
-\code{\link{anscombise}}.
+\code{\link{anscombise}} modifies a dataset so that it shares sample summary
+statistics with \link[datasets:anscombe]{Anscombe's quartet}.
 
 \code{\link{input_datasets}}: \code{input1} to \code{input8} for some input datasets
 of the same size as those in Anscombe's quartet.

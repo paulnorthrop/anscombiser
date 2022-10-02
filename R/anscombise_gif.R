@@ -18,14 +18,14 @@
 #' @details For this function to work the packages
 #'   [`ggplot2`][`ggplot2::ggplot2-package`] and
 #'   [`gganimate`][`gganimate::gganimate-package`] must be installed.
-#'
-#'   The returned object may be displayed using by typing its name,
-#'   e.g. `anim` or saved as a GIF file using
-#'   [`anim_save`][`gganimate::anim_save`], e.g.
-#'   `anim_save("anscombe.gif", anim)`.
 #' @return An object of class `c("gganim", "gg", "ggplot")` with an additional
 #'   attribute `new_data` that is a data frame with 3 variables, `x`, `y` and
 #'   `dataset` containing the datasets output from `anscombise`.
+#'
+#'   The returned object may be displayed using by typing its name,
+#'   e.g., `anim` or saved as a GIF file using
+#'   [`anim_save`][`gganimate::anim_save`], e.g.,
+#'   `gganimate::anim_save("anscombe.gif", anim)`.
 #' @seealso [`anscombise`] modifies a dataset so that it shares sample summary
 #'   statistics with [Anscombe's quartet][datasets::anscombe].
 #' @seealso [`input_datasets`]: `input1` to `input8` for some input datasets
