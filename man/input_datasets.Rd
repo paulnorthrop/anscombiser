@@ -5,6 +5,10 @@
 \alias{input2}
 \alias{input3}
 \alias{input4}
+\alias{input5}
+\alias{input6}
+\alias{input7}
+\alias{input8}
 \title{Input datasets for use by anscombise()}
 \format{
 All datasets are objects of class \code{matrix} (inherits from \code{array}) with 11 rows and 2 columns.
