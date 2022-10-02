@@ -3,8 +3,8 @@
 #' Create an animation to show datasets that share sample summary statistics
 #' with [Anscombe's quartet][datasets::anscombe].
 #'
-#' @param x A list of input datasets.  Each one must be suitable argument
-#'   `x` for for [`anscombise`].
+#' @param x A list of input datasets.  Each one must be a suitable argument
+#'   `x` for [`anscombise`].
 #' @param which,idempotent Vectors that provide the arguments of the same names
 #'   to [`anscombise`] for each dataset.  If necessary, [`rep_len`] is used to
 #'   replicate these arguments so that the each have length `length(x)`.
