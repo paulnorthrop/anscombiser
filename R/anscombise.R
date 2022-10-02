@@ -44,7 +44,7 @@
 #' @seealso [`input_datasets`]: `input1` to `input8` for some input datasest
 #'   of the same size as those in Anscombe's quartet.
 #' @examples
-#' # Produce Anscombe-like datasets using input1 to input8.
+#' # Produce Anscombe-like datasets using input1 to input8
 #'
 #' a1 <- anscombise(input1, idempotent = FALSE)
 #' plot(a1)

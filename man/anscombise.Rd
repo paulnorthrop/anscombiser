@@ -55,7 +55,7 @@ exactly/approximately the required summary statistics then the returned
 dataset is exactly/approximately the same as the target dataset.
 }
 \examples{
-# Produce Anscombe-like datasets using input1 to input8.
+# Produce Anscombe-like datasets using input1 to input8
 
 a1 <- anscombise(input1, idempotent = FALSE)
 plot(a1)
