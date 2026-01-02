@@ -29,6 +29,9 @@ sample summary statistics with another user-supplied dataset.
 
 See \code{vignette("intro-to-anscombiser", package = "anscombiser")} for
 an overview of the package.
+
+The functions \code{\link{anscombise_gif}} and \code{\link{mimic_gif}} enable the animation of
+several datasets produced by \code{\link{anscombise}} and \code{\link{mimic}}, respectively.
 }
 \references{
 Anscombe, F. J. (1973). Graphs in Statistical Analysis.
@@ -36,7 +39,7 @@ The American Statistician 27 (1): 17–21.
 \doi{10.1080/00031305.1973.10478966}
 }
 \seealso{
-\code{\link{anscombise}} and \code{\link{mimic}}
+\code{\link{anscombise}}, \code{\link{mimic}}, \code{\link{anscombise_gif}} and \code{\link{mimic_gif}}.
 }
 \author{
 \strong{Maintainer}: Paul J. Northrop \email{p.northrop@ucl.ac.uk} [copyright holder]

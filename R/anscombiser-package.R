@@ -21,10 +21,13 @@
 #'
 #'   See `vignette("intro-to-anscombiser", package = "anscombiser")` for
 #'   an overview of the package.
+#'
+#' The functions [`anscombise_gif`] and [`mimic_gif`] enable the animation of
+#' several datasets produced by [`anscombise`] and [`mimic`], respectively.
 #' @references Anscombe, F. J. (1973). Graphs in Statistical Analysis.
 #'   The American Statistician 27 (1): 17–21.
 #'   \doi{10.1080/00031305.1973.10478966}
-#' @seealso [`anscombise`] and [`mimic`]
+#' @seealso [`anscombise`], [`mimic`], [`anscombise_gif`] and [`mimic_gif`].
 #' @importFrom graphics plot
 #' @md
 #' @docType package
