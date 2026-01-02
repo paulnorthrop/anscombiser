@@ -41,7 +41,7 @@ opar <- graphics::par(no.readonly = TRUE)
 graphics::par(mar = c(4, 4, 1, 1))
 ```
 
-The `anscombiser` packages provides 8 input files: `input1` to `input8` that can be used to create Anscombe-like, with the same sample size of 11 as the original Anscombe quartet.  The following example uses input data arranged on the edge of a circle.
+The `anscombiser` packages provides 8 input files: `input1` to `input8` that can be used to create Anscombe-like datasets, with the same sample size of 11 as the original Anscombe quartet.  The following example uses input data arranged on the edge of a circle.
 
 ```{r}
 a2 <- anscombise(input2, which = 4)
