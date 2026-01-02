@@ -1,69 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>/articles/intro-to-anscombiser.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/anscombe.html</loc>
-  </url>
-  <url>
-    <loc>/reference/anscombise.html</loc>
-  </url>
-  <url>
-    <loc>/reference/anscombiser-internal.html</loc>
-  </url>
-  <url>
-    <loc>/reference/anscombiser-package.html</loc>
-  </url>
-  <url>
-    <loc>/reference/anscombiser.html</loc>
-  </url>
-  <url>
-    <loc>/reference/anscombise_gif.html</loc>
-  </url>
-  <url>
-    <loc>/reference/get_stats.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/input_datasets.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mapdata.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mimic.html</loc>
-  </url>
-  <url>
-    <loc>/reference/mimic_gif.html</loc>
-  </url>
-  <url>
-    <loc>/reference/plot.anscombe.html</loc>
-  </url>
-  <url>
-    <loc>/reference/print.anscombe.html</loc>
-  </url>
-  <url>
-    <loc>/reference/set_stats.html</loc>
-  </url>
-  <url>
-    <loc>/reference/trump.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://github.com/paulnorthrop/anscombiser/404.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/articles/index.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/articles/intro-to-anscombiser.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/authors.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/index.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/news/index.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/anscombe.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/anscombise.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/anscombiser-internal.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/anscombiser-package.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/anscombise_gif.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/get_stats.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/index.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/input_datasets.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/mapdata.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/mimic.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/mimic_gif.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/plot.anscombe.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/print.anscombe.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/set_stats.html</loc></url>
+<url><loc>https://github.com/paulnorthrop/anscombiser/reference/trump.html</loc></url>
 </urlset>
+
