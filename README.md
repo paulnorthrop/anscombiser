@@ -3,8 +3,6 @@
 
 # anscombiser
 
-[![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/paulnorthrop/anscombiser?branch=main&svg=true)](https://ci.appveyor.com/project/paulnorthrop/anscombiser)
 [![R-CMD-check](https://github.com/paulnorthrop/anscombiser/workflows/R-CMD-check/badge.svg)](https://github.com/paulnorthrop/anscombiser/actions)
 [![Coverage
 Status](https://codecov.io/github/paulnorthrop/anscombiser/coverage.svg?branch=main)](https://codecov.io/github/paulnorthrop/anscombiser?branch=master)
@@ -36,6 +34,7 @@ another dataset (`trump` below right).
 ``` r
 library(anscombiser)
 library(datasauRus)
+#> Warning: package 'datasauRus' was built under R version 4.5.2
 dino <- datasaurus_dozen_wide[, c("dino_x", "dino_y")]
 new_dino <- mimic(dino, trump)
 plot(new_dino, legend_args = list(x = "topright"))

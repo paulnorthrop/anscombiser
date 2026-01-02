@@ -2,8 +2,6 @@
 ^\.Rproj\.user$
 ^create_data$
 ^README\.Rmd$
-^\.travis\.yml$
-^appveyor\.yml$
 ^docs$
 ^doc$
 ^Meta$
