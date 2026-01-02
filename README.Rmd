@@ -30,7 +30,7 @@ Anscombe's quartet are a set of four two-variable datasets that have several com
 
 The `mimic()` function transforms an input dataset (`dino` below left) so that it has the same values of Anscombe's summary statistics as another dataset (`trump` below right).
 
-```{r, trump, out.width='50%', fig.show='hold'}
+```{r, trump, out.width='50%', fig.show='hold', warning = FALSE}
 library(anscombiser)
 library(datasauRus)
 dino <- datasaurus_dozen_wide[, c("dino_x", "dino_y")]

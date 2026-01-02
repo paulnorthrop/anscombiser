@@ -34,7 +34,6 @@ another dataset (`trump` below right).
 ``` r
 library(anscombiser)
 library(datasauRus)
-#> Warning: package 'datasauRus' was built under R version 4.5.2
 dino <- datasaurus_dozen_wide[, c("dino_x", "dino_y")]
 new_dino <- mimic(dino, trump)
 plot(new_dino, legend_args = list(x = "topright"))
