@@ -3,7 +3,6 @@
 \docType{package}
 \name{anscombiser-package}
 \alias{anscombiser-package}
-\alias{_PACKAGE}
 \alias{anscombiser}
 \title{anscombiser: Create Datasets with Identical Summary Statistics}
 \description{
