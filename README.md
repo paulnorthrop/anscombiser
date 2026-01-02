@@ -3,7 +3,7 @@
 
 # anscombiser <a href="https://paulnorthrop.github.io/anscombiser/"><img src="man/figures/anscombiser_logo.png" align="right" style="float:right; height:150px;" alt = "anscombiser logo"/></a>
 
-[![R-CMD-check](https://github.com/paulnorthrop/anscombiser/workflows/R-CMD-check/badge.svg)](https://github.com/paulnorthrop/anscombiser/actions)
+[![R-CMD-check](https://github.com/paulnorthrop/anscombiser/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/paulnorthrop/anscombiser/actions/workflows/R-CMD-check.yaml)
 [![Coverage
 Status](https://codecov.io/github/paulnorthrop/anscombiser/coverage.svg?branch=main)](https://codecov.io/github/paulnorthrop/anscombiser?branch=master)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/anscombiser)](https://cran.r-project.org/package=anscombiser)
