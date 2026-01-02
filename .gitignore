@@ -14,3 +14,5 @@ checks
 create_data/*.gif
 create_data/gganimate.R
 *.db
+create_data/logo.R
+create_data/anscombiser_image.png
