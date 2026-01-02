@@ -16,3 +16,5 @@ create_data/gganimate.R
 *.db
 create_data/logo.R
 create_data/anscombiser_image.png
+create_data/logo2.R
+create_data/logo3.R
