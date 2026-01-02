@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# anscombiser <a href="https://paulnorthrop.github.io/anscombiser/"><img src="man/figures/anscombiser_logo.png" align="right" style="float:right; height:150px;" alt = "anscombiser logo"/></a>
+# anscombiser <a href="https://paulnorthrop.github.io/anscombiser/"><img src="man/figures/anscombiser_logo.png" align="right" style="float:right; height:150px;" alt="anscombiser logo"/></a>
 
 [![R-CMD-check](https://github.com/paulnorthrop/anscombiser/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/paulnorthrop/anscombiser/actions/workflows/R-CMD-check.yaml)
 [![Coverage
